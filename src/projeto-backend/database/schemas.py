@@ -1,96 +1,97 @@
 from pydantic import BaseModel
-from typing import List, Optional
 from datetime import date
+from typing import List
 
-class UsuarioBase(BaseModel):
-    nome: str
-    email: str
-    senha: str
-    cargo: str
-    equipe: str
-    ativo: bool
+class EvidenceBase(BaseModel):
+    link: str
+    attachment: str
+    idRequestForEvidence: int
+    deliveryDate: date
 
-class UsuarioCreate(UsuarioBase):
+class EvidenceCreate(EvidenceBase):
     pass
 
-class Usuario(UsuarioBase):
+class Evidence(EvidenceBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
-class ProcessoBase(BaseModel):
-    titulo: str
-    previsaoTermino: date
-    dataCriação: date
-    ultimaAtualizacao: date
-    ativo: bool
-    prioridade: str
+
+class RequestForEvidenceBase(BaseModel):
+    requiredDocument: str
+    description: str
+    step_id: int
+    user_id: int
+    evidenceValidationDate: date
+    is_validated: bool
+    is_actived: bool
+
+class RequestForEvidenceCreate(RequestForEvidenceBase):
+    pass
+
+class RequestForEvidence(RequestForEvidenceBase):
+    id: int
+    evidences: List[Evidence] = []
+
+    class Config:
+        from_attributes = True
+
+
+class StepBase(BaseModel):
+    name: str
+    endDate: date
+    process_id: int
+    priority: str
+    order: int
+    is_active: bool
+
+class StepCreate(StepBase):
+    pass
+
+class Step(StepBase):
+    id: int
+    requests: List[RequestForEvidence] = []
+
+    class Config:
+        from_attributes = True
+
+
+class ProcessBase(BaseModel):
+    title: str
+    endingDate: date
+    createDate: date
+    lastUpdate: date
+    is_active: bool
+    priority: str
     status: str
 
-class ProcessoCreate(ProcessoBase):
+class ProcessCreate(ProcessBase):
     pass
 
-class Processo(ProcessoBase):
+class Process(ProcessBase):
     id: int
-    usuarios: List[Usuario] = []
-    etapas: List["Etapa"] = []
+    steps: List[Step] = []
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
-class EtapaBase(BaseModel):
-    nome: str
-    dataTermino: date
-    processo_id: int
-    prioridade: str
-    ordem: int
-    ativo: bool
 
-class EtapaCreate(EtapaBase):
-    pass
 
-class Etapa(EtapaBase):
+class UserBase(BaseModel):
+    name: str
+    email: str
+    role: str
+    team: str
+    is_active: bool
+
+class UserCreate(UserBase):
+    password: str
+
+class User(UserBase):
     id: int
-    processo: Processo
-    usuarios: List[Usuario] = []
+    processes: List[Process] = []
+    steps: List[Step] = []
 
     class Config:
-        orm_mode = True
-
-class PedidoDeEvidenciaBase(BaseModel):
-    documetoRequirido: str
-    descricao: str
-    etapa_id: int
-    usuario_id: int
-    dataValidacaoEntrega: date
-    validado: bool
-    ativo: bool
-
-class PedidoDeEvidenciaCreate(PedidoDeEvidenciaBase):
-    pass
-
-class PedidoDeEvidencia(PedidoDeEvidenciaBase):
-    id: int
-    etapa: Etapa
-    usuario: Usuario
-    evidencias: List["Evidencia"] = []
-
-    class Config:
-        orm_mode = True
-
-class EvidenciaBase(BaseModel):
-    link: str
-    anexo: str
-    idPedidoDeEvidencia: int
-    dataEntregue: date
-
-class EvidenciaCreate(EvidenciaBase):
-    pass
-
-class Evidencia(EvidenciaBase):
-    id: int
-    pedido: PedidoDeEvidencia
-
-    class Config:
-        orm_mode = True
+        from_attributes = True
