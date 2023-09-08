@@ -4,21 +4,34 @@ import './Form.css'; // Importe seu arquivo CSS
 
 const client_Form: React.FC = () => {
     return (
-      <Box p={4}>
+      <Box p={5}>
         <form>
           <FormControl>
-            <FormLabel>Nome:</FormLabel>
-            <Input type="text" placeholder="Digite seu nome" />
+            <FormLabel>Title</FormLabel>
+            <Input type="text" placeholder="Título" />
           </FormControl>
-  
           <FormControl>
-            <FormLabel>Email:</FormLabel>
-            <Input type="email" placeholder="Digite seu email" />
+            <FormLabel>Deadline</FormLabel>
+            <Input type="text" placeholder="Valido até: " />
+          </FormControl>
+          <FormControl>
+            <FormLabel>InChargeOf</FormLabel>
+            <Input type="text" placeholder="Responsável: " />
+          </FormControl>
+          <FormControl>
+            <FormLabel>Objective</FormLabel>
+            <Input type="text" placeholder="Objetivo: " />
+          </FormControl>
+          <FormControl>
+            <FormLabel>MadeIn</FormLabel>
+            <Input type="text" placeholder="Criado em: " />
+          </FormControl>
+          <FormControl>
+            <FormLabel>UpdatedIn</FormLabel>
+            <Input type="text" placeholder="Atualizado em: " />
           </FormControl>
   
-          <Button type="submit" colorScheme="blue">
-            Enviar
-          </Button>
+          <Button type="submit" colorScheme="blue">Criar</Button>
         </form>
       </Box>
     );
