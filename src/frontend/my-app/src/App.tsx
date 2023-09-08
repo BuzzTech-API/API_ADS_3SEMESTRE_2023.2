@@ -1,15 +1,21 @@
-import { Home } from "./pages/Home";
-import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+
+// layouts e paginas
+import { Home } from './pages/Home'
+
+// rotas
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Home />}>
+      
+    </Route>
+  )
+)
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element ={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    <RouterProvider router={router} />
+  )
 }
 
-export default App;
+export default App
