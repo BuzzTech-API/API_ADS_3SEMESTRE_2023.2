@@ -32,7 +32,7 @@ class RequestForEvidenceCreate(RequestForEvidenceBase):
 
 class RequestForEvidence(RequestForEvidenceBase):
     id: int
-    evidences: List[Evidence] = []
+    evidences: List[Evidence]
 
     class Config:
         from_attributes = True
@@ -51,7 +51,7 @@ class StepCreate(StepBase):
 
 class Step(StepBase):
     id: int
-    requests: List[RequestForEvidence] = []
+    requests: List[RequestForEvidence]
 
     class Config:
         from_attributes = True
@@ -69,9 +69,16 @@ class ProcessBase(BaseModel):
 class ProcessCreate(ProcessBase):
     pass
 
+
+class ProcessUpdate(ProcessBase):
+    id: int
+    
+    class Config:
+        from_attributes = True
+
 class Process(ProcessBase):
     id: int
-    steps: List[Step] = []
+    steps: List[Step]
 
     class Config:
         from_attributes = True
@@ -90,8 +97,51 @@ class UserCreate(UserBase):
 
 class User(UserBase):
     id: int
-    processes: List[Process] = []
-    steps: List[Step] = []
+    
+
+    class Config:
+        from_attributes = True
+
+
+
+
+
+
+
+class ProcessUserBase(BaseModel):
+    user_id: int
+    process_id: int
+
+class ProcessUserCreate(ProcessUserBase):
+    pass
+
+class ProcessUser(ProcessUserBase):
+    user: User
+    process: Process    
+    class Config:
+        from_attributes = True
+
+
+class UserStepBase(BaseModel):
+    user_id: int
+    step_id: int
+
+class UserStepCreate(UserStepBase):
+    pass
+
+class UserStep(UserStepBase):
+    step: Step
+    user: User
+    class Config:
+        from_attributes = True
+
+
+
+
+class UserGet(UserBase):
+    id: int
+    processes: List[ProcessUser]
+    steps: List[UserStep]
 
     class Config:
         from_attributes = True
