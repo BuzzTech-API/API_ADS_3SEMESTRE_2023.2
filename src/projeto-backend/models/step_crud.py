@@ -6,7 +6,10 @@ from sqlalchemy.orm import relationship, mapped_column, Mapped
 from models.request_for_evidence_crud import RequestForEvidence 
 from models.user_step_crud import UserStep
 from typing import List
+
+
 class Step(Base):
+    """Classe para trabalhar a tabela de Etapa, com 2 campos que facilitam as buscas que listam todas requisições de evidencia e os usuario relacionado com a etapa"""
     __tablename__ = 'step'
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
@@ -21,13 +24,16 @@ class Step(Base):
 
 
 def get_step(db: Session, id: int):
+    """Recebe o id e retorna a etapa do id do banco"""
     return db.query(Step).filter(Step.id==id).first()
 
 
 def get_all_step(db: Session, skip: int = 0, limit: int = 100):
+    """retorn todas as etapas com limit de 100 etapas"""
     return db.query(Step).offset(skip).limit(limit).all()
 
 def create_step(db: Session, step: schemas.StepCreate):
+    """Cria uma nova etapa no banco de dados"""
     db_step = Step(name=step.name, endDate=step.endDate, process_id=step.process_id, priority=step.priority, order=step.order, is_active=step.is_active)
     db.add(db_step)
     db.commit()
@@ -36,6 +42,7 @@ def create_step(db: Session, step: schemas.StepCreate):
 
 
 def update_step(db: Session, step: schemas.Step):
+    """Se a etapa existir no banco realiza as alterações no banco e salva"""
     db_step = db.query(Step).filter(Step.id == step.id).first()
 
     if db_step:
@@ -52,6 +59,7 @@ def update_step(db: Session, step: schemas.Step):
     return db_step
 
 def delete_step(db: Session, id: int):
+    """Se a etapa existir, ela é deleta pelo id dela"""
     db_step = db.query(Step).filter(Step.id == id).first()
 
     if db_step:
