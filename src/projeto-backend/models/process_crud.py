@@ -7,12 +7,14 @@ from sqlalchemy.orm import relationship, Mapped
 from models.step_crud import Step
 from models.process_user_crud import ProcessUser
 
+
 class Process(Base):
     """Classe que trabalha a tabela de processos no banco
     com atributos que mostra todas as etapas cadastrado no prcesso
     atributo que mostra todas as suas relação Processo-Usuario
     """
-    __tablename__ = 'process'
+
+    __tablename__ = "process"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     title = Column(String(60))
@@ -26,23 +28,32 @@ class Process(Base):
     users: Mapped[List["ProcessUser"]] = relationship(back_populates="process")
 
 
-
 def get_process(db: Session, id: int):
     """Busca o processo no banco pelo o id"""
-    return db.query(Process).filter(Process.id==id).first()
+    return db.query(Process).filter(Process.id == id).first()
 
 
 def get_all_process(db: Session, skip: int = 0, limit: int = 100):
     """Busca todos os processos no banco limitando a busca a 100 por vez podendo paginar de 100 em 100"""
     return db.query(Process).offset(skip).limit(limit).all()
 
+
 def create_process(db: Session, process: schemas.ProcessCreate):
     """Cria um novo processo no banco"""
-    db_process = Process(title=process.title, endingDate=process.endingDate, createDate=process.createDate, lastUpdate=process.lastUpdate, is_active=process.is_active, priority=process.priority, status= process.status)
+    db_process = Process(
+        title=process.title,
+        endingDate=process.endingDate,
+        createDate=process.createDate,
+        lastUpdate=process.lastUpdate,
+        is_active=process.is_active,
+        priority=process.priority,
+        status=process.status,
+    )
     db.add(db_process)
     db.commit()
     db.refresh(db_process)
     return db_process
+
 
 def update_process(db: Session, process: schemas.Process):
     """Se existir, altera o processo no banco"""
@@ -59,8 +70,9 @@ def update_process(db: Session, process: schemas.Process):
 
         db.commit()
         db.refresh(db_process)
-    
+
     return db_process
+
 
 def delete_process(db: Session, id: int):
     """Se existir, deleta o processo no banco pelo o id dele"""
@@ -69,5 +81,5 @@ def delete_process(db: Session, id: int):
     if db_process:
         db.delete(db_process)
         db.commit()
-    
+
     return db_process
