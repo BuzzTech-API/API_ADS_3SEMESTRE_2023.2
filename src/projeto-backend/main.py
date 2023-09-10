@@ -3,14 +3,13 @@ from sqlalchemy.orm import Session
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from database.database import SessionLocal, engine
-from routers import evidence, process_user, process, request_for_evidence, step, user_step, user
+from routers import evidence, process_user, process, request_for_evidence, step, user_step, user, login
 
 database.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-
-
+user.create_admin()
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,6 +18,7 @@ app.add_middleware(
     allow_headers=['*']
 )
 
+app.include_router(login.router)
 app.include_router(evidence.router)
 app.include_router(process_user.router)
 app.include_router(process.router)
