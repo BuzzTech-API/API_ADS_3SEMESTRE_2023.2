@@ -24,7 +24,22 @@ services:
       - 8080:8080
     networks:
       - backnet
-
+  
+  frontend:
+    image: node:20
+    restart: always
+    command: "npm start"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./frontend/my-app:/home/node/app
+    ports:
+      - 3000:3000
+    networks:
+      - backnet
+    
         
 
 
@@ -33,7 +48,7 @@ volumes:
 
 secrets:
   db-password:
-    file: db/password.txt
+    file: ./db/password.txt
 
 networks:
   backnet:
