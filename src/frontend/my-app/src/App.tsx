@@ -2,13 +2,12 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 
 // layouts e paginas
 import { Home } from './pages/Home'
-import SideBar from './components/SideBar/SideBar'
-import { PageModal } from './pages/ModalPage'
+import { ModalSolicitaEvidencia } from './components/Modal/ModalPage'
 
 // rotas
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<PageModal/>}>
+    <Route path="/" element={<ModalSolicitaEvidencia/>}>
       
     </Route>
   )
