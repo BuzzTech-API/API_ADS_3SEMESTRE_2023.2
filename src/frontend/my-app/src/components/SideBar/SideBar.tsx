@@ -1,5 +1,5 @@
 import { Image, Flex, Center, Text, IconButton, Input} from "@chakra-ui/react"
-import { SettingsIcon, Search2Icon, AddIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import {Search2Icon, AddIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
 import Logo from "../../assets/images/logo-ionichealth-1.png"
 
@@ -21,7 +21,6 @@ function SideBar() {
                 mt="80px"
                 mb="50px">
                 <Image src={Logo} alt="Logo Ionic Health"></Image>
-                <hr/>
             </Center>
 
             
@@ -50,14 +49,15 @@ function SideBar() {
                         bg="white"
                         border="0"
                         color="#292A2D"
-
+                        p="0"
                         icon={<Search2Icon />}>
                     </IconButton>
                     <IconButton
                         aria-label="Btn Add Processo"
                         bg="#58595B"
                         color="white"
-                        icon={<AddIcon />}>
+                        icon={<AddIcon />}
+                        _hover={{color:"black", bg:"white"}}>
                     </IconButton>
                 </Flex>
             </Flex>
