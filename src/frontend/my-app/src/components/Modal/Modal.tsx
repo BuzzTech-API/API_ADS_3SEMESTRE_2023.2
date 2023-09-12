@@ -26,7 +26,7 @@ import {
           <ModalContent>
             {header ? <ModalHeader>{header}</ModalHeader>: null}
             <ModalCloseButton />
-            <ModalBody>{children}</ModalBody>
+            <ModalBody bg='#58595B' borderRadius='5px'>{children}</ModalBody>
             {footer ? <ModalFooter>{footer}</ModalFooter>: null}
           </ModalContent>
         </Modal>
