@@ -9,23 +9,28 @@ export const ModalSolicitaEvidencia = () =>{
     return (
         
             <>
-            <Button bg='teal' onClick={onOpen} colorScheme="dark" variant='outline'>Pedir evidência</Button>
+            <Button bg='#53C4CD' onClick={onOpen} colorScheme="dark" variant='solid' color='dark'>Pedir evidência</Button>
                 <ModalGeneric isOpen={isOpen} onClose={onClose}>
-            <FormLabel textAlign="center" fontSize="large"><strong>Solicitação de evidência</strong></FormLabel>
-                <FormLabel pt={3}>Documento requerido</FormLabel>
-                <Input placeholder='Digite o documento requerido' size='md' />
+            <FormLabel textAlign="center" fontSize="large" color='white'><strong>Solicitação de evidência</strong></FormLabel>
+                <FormLabel pt={3} color='white'>Documento requerido</FormLabel>
+                <Input bg='white' placeholder='Digite o documento requerido' size='md' />
 
-                <FormLabel pt={3}>Descrição</FormLabel>
-                <Textarea placeholder='Descreva a solicitação' />
+                <FormLabel pt={3} color='white'>Descrição</FormLabel>
+                <Textarea bg='white' placeholder='Descreva a solicitação' />
 
-                <FormLabel pt={3}>Data de entrega</FormLabel>
-                <Input placeholder="Selecione a data" size="md" type="datetime-local"/>
+                <FormLabel pt={3} color='white'>Data de entrega</FormLabel>
+                <Input bg='white' placeholder="Selecione a data" size="md" type="datetime-local"/>
 
-                <FormLabel pt={3}>Responsável</FormLabel>
-                <Input mb={4}placeholder='Digite o responsável pela solicitação' size='md' />
+                <FormLabel pt={3} color='white'>Responsável</FormLabel>
+                <Input bg='white' mb={4}placeholder='Digite o responsável pela solicitação' size='md' />
                 
-                <Button display="flex" ml="auto" colorScheme='teal' variant='solid'>Enviar</Button>
+                <Button display="flex" ml="auto" bg='#53C4CD' variant='solid' textColor='black' colorScheme="#58595B" width='100%'>Enviar</Button>
         </ModalGeneric></>
         
     );
 };
+
+
+// #53C4CD
+// #58595B
+// #292A2D
