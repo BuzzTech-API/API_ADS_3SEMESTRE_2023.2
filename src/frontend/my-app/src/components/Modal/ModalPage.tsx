@@ -9,9 +9,9 @@ export const ModalSolicitaEvidencia = () =>{
     return (
         
             <>
-            <Button onClick={onOpen} colorScheme="dark" variant='outline'>Pedir evidência</Button>
+            <Button bg='teal' onClick={onOpen} colorScheme="dark" variant='outline'>Pedir evidência</Button>
                 <ModalGeneric isOpen={isOpen} onClose={onClose}>
-            <FormLabel><strong>Solicitação de evidência</strong></FormLabel>
+            <FormLabel textAlign="center" fontSize="large"><strong>Solicitação de evidência</strong></FormLabel>
                 <FormLabel pt={3}>Documento requerido</FormLabel>
                 <Input placeholder='Digite o documento requerido' size='md' />
 
@@ -24,7 +24,7 @@ export const ModalSolicitaEvidencia = () =>{
                 <FormLabel pt={3}>Responsável</FormLabel>
                 <Input mb={4}placeholder='Digite o responsável pela solicitação' size='md' />
                 
-                <Button colorScheme='teal' variant='solid'>Enviar</Button>
+                <Button display="flex" ml="auto" colorScheme='teal' variant='solid'>Enviar</Button>
         </ModalGeneric></>
         
     );
