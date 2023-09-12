@@ -1,39 +1,58 @@
-import React from 'react'; //Importação do React
-import { Box, FormControl, FormLabel, Input, Button } from '@chakra-ui/react'; //Importação da Biblioteca Chakra
-import './Form.css'; // Importe seu arquivo CSS
+import React, { useState } from 'react';
+import { Box, Button, FormControl, FormLabel, Input } from '@chakra-ui/react';
+import './ClientForm.css';
 
-const client_Form: React.FC = () => {
-    return (
-      <Box p={5}>
-        <form>
-          <FormControl>
-            <FormLabel>Title</FormLabel>
-            <Input type="text" placeholder="Título" />
-          </FormControl>
-          <FormControl>
-            <FormLabel>Deadline</FormLabel>
-            <Input type="text" placeholder="Valido até: " />
-          </FormControl>
-          <FormControl>
-            <FormLabel>InChargeOf</FormLabel>
-            <Input type="text" placeholder="Responsável: " />
-          </FormControl>
-          <FormControl>
-            <FormLabel>Objective</FormLabel>
-            <Input type="text" placeholder="Objetivo: " />
-          </FormControl>
-          <FormControl>
-            <FormLabel>MadeIn</FormLabel>
-            <Input type="text" placeholder="Criado em: " />
-          </FormControl>
-          <FormControl>
-            <FormLabel>UpdatedIn</FormLabel>
-            <Input type="text" placeholder="Atualizado em: " />
-          </FormControl>
-  
-          <Button type="submit" colorScheme="blue">Criar</Button>
-        </form>
-      </Box>
-    );
+interface FormData {
+  name: string;
+  email: string;
+}
+
+const Client_Form: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
-export default client_Form;
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(formData);
+    // Faça o que quiser com os dados do formulário aqui
+  };
+
+  return (
+    <Box maxW="md" mx="auto" p={4}>
+      <link rel="stylesheet" href="ClientForm.css"></link>
+      <form onSubmit={handleSubmit}>
+        <FormControl id="name" mb={4}>
+          <FormLabel>Título</FormLabel>
+          <Input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+        </FormControl>
+        <FormControl id="email" mb={4}>
+          <FormLabel>Descrição</FormLabel>
+          <Input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </FormControl>
+        <button className="button" type="submit">Enviar</button>
+      </form>
+    </Box>
+  );
+};
+
+export default Client_Form;
