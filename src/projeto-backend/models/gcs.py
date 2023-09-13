@@ -14,7 +14,7 @@ class GCStorage:
 
     async def upload_file(self,file):
         try:
-            if file: #Verifica se o arquivo está vazio
+            if file: #Verifica se o arquivo existe
 
                 #Obtem o bucket do gcs define o caminho do arquivo no bucket e cria um novo blob
                 bucket = self.storage_client.get_bucket(self.bucket_name)

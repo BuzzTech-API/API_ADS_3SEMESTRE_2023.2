@@ -8,7 +8,6 @@ from typing import Annotated
 router = APIRouter(tags=["Evidences"])
 
 
-
 ## Evidencias rotas
 
 
@@ -54,8 +53,11 @@ def delete_evidence(
     return evidence_crud.delete_evidence(id=id, db=db)
 
 @router.post("/uploadfile/")
-async def create_upload_file(file: UploadFile = File(...)):
+async def create_upload_file(
+    current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
+    file: UploadFile = File(...)
+):
+    """Rota para fazer upload de algum arquivo"""
+    link = await gcs.GCStorage().upload_file(file)
 
-    test = await gcs.GCStorage().upload_file(file)
-
-    return test
+    return link
