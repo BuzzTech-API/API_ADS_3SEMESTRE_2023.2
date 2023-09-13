@@ -2,14 +2,15 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 
 // layouts e paginas
 import { Home } from './pages/Home'
-import { ModalSolicitaEvidencia } from './components/Modal/ModalPage'
+import { ModalSolicitaEvidencia } from './components/Modal/BtnPedirEvidencia'
 
 // rotas
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<ModalSolicitaEvidencia/>}>
-      
+    <Route path="/" element={<Home/>}>
+
     </Route>
+    
   )
 )
 

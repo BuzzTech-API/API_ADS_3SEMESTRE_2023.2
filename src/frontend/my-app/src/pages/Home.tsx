@@ -3,6 +3,6 @@ import React from "react"
 
 export const Home = () => {
     return(
-        <Button>Oie</Button>
+        <h1>ola</h1>
     )
 }
