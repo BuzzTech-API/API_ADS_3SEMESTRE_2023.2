@@ -5,7 +5,7 @@ import { Home } from './pages/Home'
 import { Login } from './pages/Login'
 import SideBar from './components/SideBar/SideBar'
 import { PageModal } from './pages/ModalPage'
-import { ModalSolicitaEvidencia } from './components/Modal/ModalPage'
+import { ModalSolicitaEvidencia } from './components/Modal/BtnPedirEvidencia'
 
 // rotas
 const router = createBrowserRouter(

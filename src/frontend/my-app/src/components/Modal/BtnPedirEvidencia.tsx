@@ -24,7 +24,7 @@ export const ModalSolicitaEvidencia = () =>{
                 <FormLabel pt={3} color='white'>Responsável</FormLabel>
                 <Input bg='white' mb={4}placeholder='Digite o responsável pela solicitação' size='md' />
                 
-                <Button display="flex" ml="auto" bg='#53C4CD' variant='solid' textColor='black' colorScheme="#58595B" width='100%'>Enviar</Button>
+                <Button display="flex" mb={3} bg='#53C4CD' variant='solid' textColor='black' colorScheme="#58595B" width='100%'>Enviar</Button>
         </ModalGeneric></>
         
     );
