@@ -1,11 +1,12 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from database import schemas
 from sqlalchemy.orm import Session
-from models import evidence_crud, oauth2
+from models import evidence_crud, oauth2, gcs
 from database.database import get_db
 from typing import Annotated
 
 router = APIRouter(tags=["Evidences"])
+
 
 
 ## Evidencias rotas
@@ -28,6 +29,7 @@ def create_evidence(
     evidence: schemas.EvidenceCreate,
     db: Session = Depends(get_db),
 ):
+
     """Rota para criar uma nova evidencia"""
     return evidence_crud.create_evidence(db=db, evidence=evidence)
 
@@ -50,3 +52,10 @@ def delete_evidence(
 ):
     """Rota para deletar uma evidencia pelo id"""
     return evidence_crud.delete_evidence(id=id, db=db)
+
+@router.post("/uploadfile/")
+async def create_upload_file(file: UploadFile = File(...)):
+
+    test = await gcs.GCStorage().upload_file(file)
+
+    return test
