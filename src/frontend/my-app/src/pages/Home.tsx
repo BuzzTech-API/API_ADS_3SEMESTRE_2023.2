@@ -1,8 +1,8 @@
-import { Button } from "@chakra-ui/react"
 import React from "react"
+import SideBar from "../components/SideBar/SideBar"
 
 export const Home = () => {
     return(
-        <h1>ola</h1>
+        <SideBar></SideBar>
     )
 }
