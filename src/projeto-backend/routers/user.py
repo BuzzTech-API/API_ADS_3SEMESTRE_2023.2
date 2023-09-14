@@ -18,7 +18,7 @@ def create_admin():
             db_user = user_crud.User(
                 email="adm@adm",
                 name="administrador",
-                password="a1d9067710b4606975baecd0eb31d548383d6c46d2d568182d2b24e283b3008d",
+                password="adm",
                 role="Administrador",
                 team="Administrador",
                 is_active=True,
@@ -62,7 +62,7 @@ def get_all_users(
     return user
 
 
-@router.get("/users/me/", response_model=schemas.User)
+@router.get("/users/get/me", response_model=schemas.User)
 async def read_users_me(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)]
 ):

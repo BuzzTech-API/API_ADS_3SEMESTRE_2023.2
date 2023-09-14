@@ -11,7 +11,6 @@ class Evidence(Base):
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     link = Column(String(60))
-    attachment = Column(String(60))
     idRequestForEvidence = Column(Integer, ForeignKey("request_for_evidence.id"))
     deliveryDate = Column(Date)
 
@@ -30,7 +29,6 @@ def create_evidence(db: Session, evidence: schemas.EvidenceCreate):
     """Cria uma nova evidencia no banco"""
     db_evidence = Evidence(
         link=evidence.link,
-        attachment=evidence.attachment,
         idRequestForEvidence=evidence.idRequestForEvidence,
         deliveryDate=evidence.deliveryDate,
     )
@@ -46,7 +44,6 @@ def update_evidence(db: Session, evidence: schemas.Evidence):
 
     if db_evidence:
         db_evidence.link = evidence.link
-        db_evidence.attachment = evidence.attachment
         db_evidence.idRequestForEvidence = evidence.idRequestForEvidence
         db_evidence.deliveryDate = evidence.deliveryDate
 

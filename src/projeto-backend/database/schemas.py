@@ -4,7 +4,6 @@ from typing import List
 
 class EvidenceBase(BaseModel):
     link: str
-    attachment: str
     idRequestForEvidence: int
     deliveryDate: date
 
