@@ -7,12 +7,10 @@ import {
     Card,
     FormControl,
     FormLabel,
-    FormErrorMessage,
-    FormHelperText,
     Center
     
 } from '@chakra-ui/react'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 export const Login= () => {
     const [show, setShow] = useState(false)
@@ -22,14 +20,7 @@ export const Login= () => {
     
     const submit = async (e:any) => {
         e.preventDefault();
-        const formData = new FormData()
-        formData.append('grant_type', '');
-        formData.append('username', email);
-        formData.append('password', senha);
-        formData.append('scope', '');
-        formData.append('client_id', '');
-        formData.append('client_secret', '');
-
+        
         const response = await fetch('http://localhost:8000/login', {
             method: 'POST',
             headers: {
@@ -39,39 +30,40 @@ export const Login= () => {
             body: 'grant_type=&username='+email+'&password='+senha+'&scope=&client_id=&client_secret='
 
         });
-        console.log(response.json());
+        const data = await response.json()
+        localStorage.setItem('access_token',data.access_token)
+        
     }
 
-    return <Card border={'1px'} margin={'10vh 25vw'} >
+    return <Card backgroundColor={'#292a2d'} margin={'10rem 25rem'} textColor={'white'}>
         <form onSubmit={submit}>
 
-        <Box width={'40%'} height={'50vh'} margin={'1vh auto'} > 
-            <FormControl margin={'1vh auto'}>
+        <Box width={'20rem'} height={'30rem'} margin={'1rem auto'} padding={'1rem'}> 
+            <FormControl margin={'1rem auto'}>
                 <FormLabel textAlign={'center'}>Email</FormLabel>
                 <Input 
                 type='email' 
                 onChange={e => setEmail(e.target.value)} 
                 />
             </FormControl>
-            <FormControl margin={'1vh auto'}>
+            <FormControl margin={'1rem auto'}>
                 <FormLabel textAlign={'center'}>Senha</FormLabel>
                 <InputGroup size='md'>
                     <Input
-                    pr='4.5rem'
+                    pr='8.5rem'
                     type={show ? 'text' : 'password'}
                     placeholder='Enter password'
                     onChange={e => setSenha(e.target.value)}
                     />
                     <InputRightElement width='4.5rem'>
-                        <Button h='1.75rem' size='sm' onClick={handleClick}>
+                        <Button textColor={'white'} backgroundColor={'#4fb3bb'} h='1.75rem' size='sm' onClick={handleClick}>
                             {show ? 'Hide' : 'Show'}
                         </Button>
                     </InputRightElement>
                 </InputGroup>
             </FormControl>
             <Center>
-            <Button type='submit'>Logar</Button>
-
+                <Button type='submit' textColor={'white'} backgroundColor={'#4fb3bb'}>Logar</Button>
             </Center>
         </Box>
         </form>
