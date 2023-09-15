@@ -12,13 +12,13 @@ router = APIRouter(tags=["Processes_Users"])
 
 
 @router.get(
-    "/users_processes/{user_id}/{process_id}",
+    "/users_processes/{user_id:int}/{process_id:int}",
     response_model=Optional[schemas.ProcessUser],
 )
 def get_process_user(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
-    user_id,
-    process_id,
+    user_id:int,
+    process_id:int,
     db: Session = Depends(get_db),
 ):
     """Rota para buscar uma relação Usuario-Processo"""
@@ -32,7 +32,66 @@ def get_process_user(
     return process_user
 
 
-@router.post("/users_processes/", response_model=schemas.ProcessUserCreate)
+@router.get(
+    "/users_processes/",
+    response_model=Optional[list[schemas.ProcessUser]],
+)
+def get_all_process_user(
+    current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
+    db: Session = Depends(get_db),
+):
+    """Rota para buscar todas as relação Usuario-Processo"""
+    process_user = process_user_crud.get_process_user_by_process_id_all(
+        db=db
+    )
+    if not process_user:
+        raise HTTPException(
+            status_code=404, detail="Relação de Processo e usuário não encontrada "
+        )
+    return process_user
+
+@router.get(
+    "/users_processes/user_id/{user_id:int}",
+    response_model=Optional[list[schemas.ProcessUser]],
+)
+def get_all_process_user_by_user_id(
+    current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
+    user_id: int,
+    db: Session = Depends(get_db),
+):
+    """Rota para buscar todas as relação Usuario-Processo"""
+    process_user = process_user_crud.get_process_user_by_user_id_all(
+        user_id=user_id,
+        db=db
+    )
+    if not process_user:
+        raise HTTPException(
+            status_code=404, detail="Relação de Processo e usuário não encontrada "
+        )
+    return process_user
+
+@router.get(
+    "/users_processes/process_id/{process_id:int}",
+    response_model=Optional[list[schemas.ProcessUser]],
+)
+def get_all_process_user_by_process_id(
+    current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
+    process_id: int,
+    db: Session = Depends(get_db),
+):
+    """Rota para buscar todas as relação Usuario-Processo"""
+    process_user = process_user_crud.get_process_user_by_process_id_all(
+        process_id=process_id,
+        db=db
+    )
+    if not process_user:
+        raise HTTPException(
+            status_code=404, detail="Relação de Processo e usuário não encontrada "
+        )
+    return process_user
+
+
+@router.post("/users_processes/", response_model=Optional[schemas.ProcessUserCreate])
 def create_process_user(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
     process_user: schemas.ProcessUserCreate,
