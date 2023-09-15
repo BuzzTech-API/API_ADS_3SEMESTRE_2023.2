@@ -6,6 +6,7 @@ import { Login } from './pages/Login'
 import SideBar from './components/SideBar/SideBar'
 import { PageModal } from './pages/ModalPage'
 import { ModalSolicitaEvidencia } from './components/Modal/BtnPedirEvidencia'
+import { ModalUploadEvidence } from './components/Modal/BtnUploadEvidence'
 
 // rotas
 const router = createBrowserRouter(
@@ -17,7 +18,7 @@ const router = createBrowserRouter(
 
       <Route path='/login' element={<Login />}></Route>
       <Route path="/modal2" element={<ModalSolicitaEvidencia/>}></Route>
-
+      <Route path="/modal3" element={<ModalUploadEvidence/>}></Route>
       
     </>
 
