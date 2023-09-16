@@ -51,7 +51,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/modal2',
-                    element: <ModalSolicitaEvidencia />
+                    element: <ModalUploadEvidence />
                 }
             ]
         },

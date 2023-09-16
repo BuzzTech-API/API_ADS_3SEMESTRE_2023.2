@@ -21,8 +21,8 @@ def get_process(
     return process_crud.get_process(id=id, db=db)
 
 
-@router.get("/processes/", response_model=Optional[list[schemas.Process]])
-def get_process(
+@router.get("/processes/", response_model=Optional[list[schemas.ProcessAll]])
+def get_process_all(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
     db: Session = Depends(get_db),
 ):

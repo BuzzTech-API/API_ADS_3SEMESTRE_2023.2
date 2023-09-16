@@ -35,7 +35,7 @@ def get_process(db: Session, id: int):
 
 def get_all_process(db: Session, skip: int = 0, limit: int = 100):
     """Busca todos os processos no banco limitando a busca a 100 por vez podendo paginar de 100 em 100"""
-    return db.query(Process).offset(skip).limit(limit).all()
+    return db.query(Process).order_by(Process.id).offset(skip).limit(limit).all()
 
 
 def create_process(db: Session, process: schemas.ProcessCreate):
