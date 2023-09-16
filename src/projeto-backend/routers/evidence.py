@@ -1,9 +1,19 @@
-from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
+import json
+from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
 from database import schemas
 from sqlalchemy.orm import Session
-from models import evidence_crud, oauth2, gcs
+from models import evidence_crud, oauth2, gcs, send_mail
 from database.database import get_db
 from typing import Annotated, Optional
+
+# mail
+from typing import List
+
+from fastapi import BackgroundTasks, FastAPI
+from fastapi_mail import ConnectionConfig, FastMail, MessageSchema, MessageType
+from pydantic import BaseModel, EmailStr
+from starlette.responses import JSONResponse
+
 
 router = APIRouter(tags=["Evidences"])
 
@@ -62,10 +72,30 @@ def delete_evidence(
 
 @router.post("/uploadfile/")
 async def create_upload_file(
-    current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
+    #current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
+    users: List[str] = Form(...),
     file: UploadFile = File(...)
-):
+) -> JSONResponse:
     """Rota para fazer upload de algum arquivo"""
-    link = await gcs.GCStorage().upload_file(file)
+    #link = await gcs.GCStorage().upload_file(file) #chama a função que o upload do arquivo para a nuvem
 
-    return link
+    # mail
+    html = """
+    <h5>Thanks for using Fastapi-mail</h5>
+    <br>
+    <
+    """ 
+    users_dict = [json.loads(user) for user in users]
+    #emails = [user['email'] for user in users_dict]
+    #print(emails)
+    #message = MessageSchema(
+    #subject="Fastapi-Mail module",
+    #recipients="",
+    #body=html,
+    #subtype=MessageType.html)
+
+    #print()
+    #fm = FastMail()
+    #await fm.send_message(message)
+   # return JSONResponse(status_code=200, content={"message": "email has been sent"})
+    return users
