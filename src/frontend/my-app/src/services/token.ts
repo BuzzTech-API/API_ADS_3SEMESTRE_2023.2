@@ -1,66 +1,70 @@
-export const verifyToken = async (isAuthenticated: boolean) => {
+export class Authenticated {
+  public isAuthenticated: boolean = false
+}
+export const refreshToken = async (authenticated: Authenticated) => {
+  const refresh_token = localStorage.getItem('refresh_token')
+  if (refresh_token) {
+    try {
+      const response = await fetch('http://localhost:8000/refresh_token', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Authorization': `Bearer ${refresh_token}`,
+        },
+      });
 
-    const token = localStorage.getItem('access_token');
+      if (response.status === 200) {
+        const data = await response.json()
+        localStorage.setItem('access_token', data.access_token)
+        localStorage.setItem('refresh_token', data.refresh_token)
+        return authenticated.isAuthenticated = true;
+      }
+      else {
+        localStorage.removeItem('refresh_token');
+        return authenticated.isAuthenticated = false;
 
-    if (token) {
-        try {
-            const response = await fetch('http://localhost:8000/users/get/me/', {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Authorization': `Bearer ${token}`,
-                },
-            });
 
-            if (response.status === 200) {
-                isAuthenticated = true;
-                
-            }
-            else {
-                localStorage.removeItem('access_token');
-                isAuthenticated = false;
-            }
-        } catch (error) {
-            // Se a verificação falhar (por exemplo, token inválido), você pode lidar com isso aqui
-            console.error('Erro na verificação do token:', error);
-        }
+      }
+    } catch (error) {
+      // Se a verificação falhar (por exemplo, token inválido), você pode lidar com isso aqui
+      console.error('Erro na verificação do token:', error);
     }
   }
+}
 
-  export const verifyTokenPromise = (isAuthenticated: boolean) => {
-    // Exemplo de utilização
-    /* verifyToken(isAuthenticated)
-    .then(() => {
-        Código para quando a verificação for bem-sucedida
-    })
-    .catch((error) => {
-        Código para quando ocorrer um erro na verificação
-    }); */
+export const verifyToken = async (authenticated: Authenticated) => {
 
-    const token = localStorage.getItem('access_token');
-  
-    if (token) {
-      return fetch('http://localhost:8000/users/get/me/', {
+  const token = localStorage.getItem('access_token');
+  const refresh_token = localStorage.getItem('refresh_token')
+  if (token) {
+    try {
+      const response = await fetch('http://localhost:8000/users/get/me/', {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Authorization': `Bearer ${token}`,
         },
-      })
-        .then((response) => {
-          if (response.status === 200) {
-            isAuthenticated = true;
-          } else {
-            localStorage.removeItem('access_token');
-            isAuthenticated = false;
-          }
-        })
-        .catch((error) => {
-          // Se a verificação falhar (por exemplo, token inválido), você pode lidar com isso aqui
-          console.error('Erro na verificação do token:', error);
-        });
-    } else {
-      return Promise.resolve(); // Sem token para verificar
+      });
+
+      if (response.status === 200) {
+        return authenticated.isAuthenticated = true;
+      }
+      else {
+        localStorage.removeItem('access_token');
+        
+        if (refresh_token) {
+          return await refreshToken(authenticated)
+        }
+        return authenticated.isAuthenticated = false;
+
+      }
+    } catch (error) {
+      // Se a verificação falhar (por exemplo, token inválido), você pode lidar com isso aqui
+      console.error('Erro na verificação do token:', error);
     }
-  };
-  
+  }
+  if (refresh_token) {
+    return await refreshToken(authenticated)
+  }
+}
+

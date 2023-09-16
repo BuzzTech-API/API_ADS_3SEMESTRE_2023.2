@@ -19,6 +19,7 @@ class RequestForEvidence(Base):
     step_id = Column(Integer, ForeignKey("step.id"))
     user_id = Column(Integer, ForeignKey("user.id"))
     evidenceValidationDate = Column(Date)
+    deliveryDate = Column(Date)
     is_validated = Column(Boolean)
     is_actived = Column(Boolean, default=True)
     evidences = relationship(Evidence)

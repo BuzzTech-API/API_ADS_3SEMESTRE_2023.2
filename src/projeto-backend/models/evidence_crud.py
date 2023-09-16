@@ -10,7 +10,7 @@ class Evidence(Base):
     __tablename__ = "evidence"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    link = Column(String(60))
+    link = Column(String(80))
     idRequestForEvidence = Column(Integer, ForeignKey("request_for_evidence.id"))
     deliveryDate = Column(Date)
 

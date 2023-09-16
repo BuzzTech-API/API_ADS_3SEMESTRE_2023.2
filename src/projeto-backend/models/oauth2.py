@@ -25,3 +25,17 @@ async def get_current_user(
     return JWTtoken.verify_token(
         token=token, credentials_exception=credentials_exception, db=db
     )
+
+async def refresh_user_token(
+    token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)
+):
+    """Pega o usuario atual"""
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+
+    return JWTtoken.refresh_token(
+        token=token, credentials_exception=credentials_exception, db=db
+    )

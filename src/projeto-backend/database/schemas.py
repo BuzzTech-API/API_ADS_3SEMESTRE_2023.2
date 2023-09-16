@@ -105,8 +105,6 @@ class User(UserBase):
 
 
 
-
-
 class ProcessUserBase(BaseModel):
     user_id: int
     process_id: int
@@ -119,6 +117,25 @@ class ProcessUser(ProcessUserBase):
     process: Process    
     class Config:
         from_attributes = True
+
+class ProcessUserOnlyUser(ProcessUserBase):
+    user: User  
+    class Config:
+        from_attributes = True
+
+
+
+
+class ProcessAll(ProcessBase):
+    id: int
+    steps: List[Step]
+    users: List[ProcessUserOnlyUser]
+
+    class Config:
+        from_attributes = True
+
+
+
 
 
 class UserStepBase(BaseModel):
