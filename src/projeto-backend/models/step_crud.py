@@ -14,10 +14,12 @@ class Step(Base):
     __tablename__ = "step"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    name = Column(String(60))
+    name = Column(String(64))
+    objective= Column(String(200))
+    endingDate= Column(Date)
     endDate = Column(Date)
     process_id = Column(Integer, ForeignKey("process.id"))
-    priority = Column(String(60))
+    priority = Column(String(20))
     order = Column(Integer)
     is_active = Column(Boolean, default=True)
     requests = relationship(RequestForEvidence)

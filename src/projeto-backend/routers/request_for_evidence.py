@@ -3,7 +3,7 @@ from database import schemas
 from sqlalchemy.orm import Session
 from models import request_for_evidence_crud, oauth2
 from database.database import get_db
-from typing import Annotated
+from typing import Annotated, Optional
 
 router = APIRouter(tags=["Request_For_Evidence"])
 
@@ -11,7 +11,7 @@ router = APIRouter(tags=["Request_For_Evidence"])
 ## Pedidos De Evidencia rotas
 
 
-@router.get("/request_for_evidence/{id}", response_model=schemas.RequestForEvidence)
+@router.get("/request_for_evidence/{id}", response_model=Optional[schemas.RequestForEvidence])
 def get_request_for_evidence(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
     id: int,
@@ -20,8 +20,16 @@ def get_request_for_evidence(
     """Rota para buscar o pedido de evidencia pelo id"""
     return request_for_evidence_crud.get_request_for_evidence(id=id, db=db)
 
+@router.get("/request_for_evidence/", response_model=Optional[list[schemas.RequestForEvidence]])
+def get_all_request_for_evidence(
+    current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
+    db: Session = Depends(get_db),
+):
+    """Rota para buscar o pedido de evidencia pelo id"""
+    return request_for_evidence_crud.get_all_request_for_evidence( db=db)
 
-@router.post("/request_for_evidence/", response_model=schemas.RequestForEvidence)
+
+@router.post("/request_for_evidence/", response_model=Optional[schemas.RequestForEvidence])
 def create_request_for_evidence(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
     request_for_evidence: schemas.RequestForEvidenceCreate,
@@ -33,7 +41,7 @@ def create_request_for_evidence(
     )
 
 
-@router.put("/request_for_evidence/", response_model=schemas.RequestForEvidence)
+@router.put("/request_for_evidence/", response_model=Optional[schemas.RequestForEvidence])
 def update_request_for_evidence(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
     request_for_evidence: schemas.RequestForEvidence,
