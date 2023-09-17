@@ -6,8 +6,8 @@ import { Login } from './pages/Login'
 import SideBar from './components/SideBar/SideBar'
 import { PageModal } from './pages/ModalPage'
 import { ModalSolicitaEvidencia } from './components/Modal/BtnPedirEvidencia'
-import { ModalUploadEvidence } from './components/UploadEvidence'
 import { Authenticated, verifyToken } from './services/token'
+import { ModalUploadEvidence } from './components/UploadEvidence'
 
 // rotas
 const loader = () => {
@@ -51,7 +51,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/modal2',
-                    element: <ModalUploadEvidence />
+                    element: <ModalUploadEvidence idRequestForEvidence = {1} idProcess = {1} />
                 }
             ]
         },
