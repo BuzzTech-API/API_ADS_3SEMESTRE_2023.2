@@ -1,19 +1,11 @@
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
-
-// layouts e paginas
-import { Home } from './pages/Home'
-
-// rotas
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Home />}>
-    </Route>
-  )
-)
+import { Outlet } from "react-router-dom"
+import Home from "./layout/Home"
 
 function App() {
   return (
-    <RouterProvider router={router} />
+      <div>
+        <Outlet/>
+      </div>
   )
 }
 
