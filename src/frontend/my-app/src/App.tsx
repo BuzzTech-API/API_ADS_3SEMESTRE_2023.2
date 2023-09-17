@@ -1,17 +1,28 @@
 import React from 'react'; //Importação do React
-import { ChakraProvider, CSSReset} from '@chakra-ui/react'; //Importação da Biblioteca do Chakra
-import ClientForm from './components/form/ClientForm';
+import { ChakraProvider, CSSReset, extendTheme} from '@chakra-ui/react'; //Importação da Biblioteca do Chakra
+import FormP from './components/FormProcess';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import './App.css';
 
+const theme = extendTheme({
+  fonts: {
+    body: "Poppins, sans-serif", // Altere "body" para a chave do tipo de fonte que deseja definir
+    heading: "Poppins, sans-serif", // Se você deseja definir uma fonte para títulos
+  },
+  fontWeights: {
+    normal: 400, // O peso normal da fonte (não negrito)
+    bold: 1000, // O peso da fonte em negrito
+  },
+});
+
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <CSSReset />
       <div className="App">
-        <ClientForm/>
+        <FormP/>
       </div>
     </ChakraProvider>
   );
