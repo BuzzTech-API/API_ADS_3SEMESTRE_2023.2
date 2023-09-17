@@ -46,7 +46,7 @@ def get_user(
     return user
 
 
-@router.get("/users/", response_model=List[schemas.UserGet])
+@router.get("/users/", response_model=List[schemas.User])
 def get_all_users(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
     db: Session = Depends(get_db),
