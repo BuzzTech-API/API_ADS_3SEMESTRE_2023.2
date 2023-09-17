@@ -8,7 +8,7 @@ import { Box,
          Input,
          Card, 
          CardHeader, 
-         CardBody, 
+         CardBody,                                      //Importação das Bibliotecas
          Heading,
          Modal,
          ModalOverlay,
@@ -19,7 +19,7 @@ import { Box,
          Select,
          Flex} from '@chakra-ui/react';
 
-
+//Interface para manipulação dos dados
 interface FormData {
   title: string;
   description: string;
@@ -29,6 +29,7 @@ interface FormData {
   responsible: string;
 }
 
+//Função Principal
 const FormP: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     title: '',
@@ -39,6 +40,7 @@ const FormP: React.FC = () => {
     responsible: '',
   });
 
+  //Função para lidar com mudanças no corpo do formulário
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { title, value } = e.target;
     setFormData((prevData) => ({
@@ -47,27 +49,32 @@ const FormP: React.FC = () => {
     }));
   };
 
+  //Função para lidar com mudança no item de "Prioridade"
   const handleChangePrioridade = (e:React.ChangeEvent<HTMLSelectElement>) => {
     setPrioridade("");
     console.log(e.target.value)
   };
 
+  //Função para submeter os dados ao servidor BackEnd
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
-    // Aqui vou adicionar o controle dos dados. A rota talvez ?
+    //Fetch backEnd
   };
   
+  //Variáveis para o Modal
   const [isOpen, setIsOpen] = React.useState(false);
   
   const onClose = () => setIsOpen(false);
-  
   const onOpen = () => setIsOpen(true);
 
+  //Variável para o Calendário "DatePicker"
   const [prazo, setDeadline] = useState<null | Date>(null);
 
+  //Variável para o boxList "Prioridade"
   const [priority, setPrioridade] = useState("Alta");
 
+//Retorno em HTML do Formulário
   return (
     <Modal size="xxl" isOpen={true} onClose={onClose}>
         
