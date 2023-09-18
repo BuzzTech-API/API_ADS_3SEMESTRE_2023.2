@@ -1,7 +1,7 @@
 import { Image, Flex, Center, Text, IconButton, Input } from "@chakra-ui/react"
 import { Search2Icon, AddIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
-import Logo from "../../assets/images/logo-ionichealth-1.png"
+import Logo from ".././assets/images/logo-ionichealth-1.png"
 import { useEffect, useState } from "react"
 import Process from ".././models/Process"
 import { ProcessInterface } from ".././interfaces/processInterface"

@@ -3,8 +3,8 @@ import { Box, Center, Flex, Grid, IconButton} from "@chakra-ui/react"
 import Process from "../models/Process"
 import { ProcessInterface } from "../interfaces/processInterface"
 import User from "../models/User"
-import { CardProcess } from "../components/Card/cardProcesso"
-import { CardBase } from "../components/Card/cardBase"
+//import { CardProcess } from "../components/Card/cardProcesso"
+//import { CardBase } from "../components/Card/cardBase"
 import { AddIcon } from "@chakra-ui/icons"
 
 export const Home = () => {
@@ -56,14 +56,14 @@ export const Home = () => {
     return(<div>
 
         <Grid marginLeft='1rem' templateColumns='repeat(4, 1fr)' gap='1.5rem' >
-            {processes.map((process:Process) =>{
+            {/* {processes.map((process:Process) =>{
                 return <CardProcess 
                 process={process}                
                 />
                 
 
-            })}
-            <CardBase>
+            })} */}
+            {/* <CardBase>
                 <Box padding='0' width='100%' height='100%'>
                     <Center>
                         <IconButton margin='50% auto'
@@ -78,7 +78,7 @@ export const Home = () => {
                     </Center>
                     
                 </Box>
-            </CardBase>
+            </CardBase> */}
             
         </Grid>
     </div>
