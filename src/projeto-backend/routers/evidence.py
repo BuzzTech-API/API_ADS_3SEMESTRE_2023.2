@@ -92,6 +92,7 @@ async def create_upload_file(
     #message = MessageSchema(
     #subject="Fastapi-Mail module",
     #recipients="",
+    #attachments=[file],
     #body=html,
     #subtype=MessageType.html)
 
