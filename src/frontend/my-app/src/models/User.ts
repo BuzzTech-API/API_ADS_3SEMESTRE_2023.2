@@ -15,10 +15,7 @@ export default class User {
         team: string,
         is_active: boolean,
         id: number,
-<<<<<<< HEAD
         email: string,
-=======
->>>>>>> 85dfcb8ee85c1311290d9758233175545fb71f17
         processes: Array<Process>
         ) {
         this._id = id
@@ -26,10 +23,7 @@ export default class User {
         this._role = role
         this._team = team
         this._is_active = is_active
-<<<<<<< HEAD
         this._email = email
-=======
->>>>>>> 85dfcb8ee85c1311290d9758233175545fb71f17
         this._processes = processes
     }
 
