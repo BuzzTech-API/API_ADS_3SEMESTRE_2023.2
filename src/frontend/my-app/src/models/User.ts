@@ -7,7 +7,6 @@ export default class User {
     private _is_active: boolean
     private _id: number
     
-    
     private _processes: Array<Process> = []
     
     constructor(name: string,
@@ -15,12 +14,14 @@ export default class User {
         team: string,
         is_active: boolean,
         id: number,
+        processes: Array<Process>
         ) {
         this._id = id
         this._name = name
         this._role = role
         this._team = team
         this._is_active = is_active
+        this._processes = processes
     }
 
     public get id(): number {
