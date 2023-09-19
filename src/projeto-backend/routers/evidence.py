@@ -78,25 +78,29 @@ async def create_upload_file(
 ):
     """Rota para fazer upload de algum arquivo"""
     link = await gcs.GCStorage().upload_file(file) #chama a função que o upload do arquivo para a nuvem
-    lista_emails = emails.split('&')
-    send_mail.EmailSchema = lista_emails
+
     
-    # mail
+    lista_emails = emails.split('&') #pega a string vindo do frontend, separa os emails e adciona em uma lista
+    send_mail.EmailSchema = lista_emails
+
+    # mensagem principal que vai chegar no email dos responsáveis
     html = """
     <h5>Processo</h5>
     <br>
     <h5>Dados da evidencia</h5>
     """ 
 
-    message = MessageSchema(
-    subject="Fastapi-Mail module",
-    recipients=send_mail.EmailSchema,
-    attachments=[file],
-    body=html,
-    subtype=MessageType.html)
 
-    fm = FastMail()
+    message = MessageSchema( #conteudos da mensagem
+        subject="Fastapi-Mail module", #
+        recipients=send_mail.EmailSchema, #emails
+        attachments=[file], #arquivos
+        body=html, #mensagem principal
+        subtype=MessageType.html)
+
+    fm = FastMail() #função que envia os emails
     await fm.send_message(message)
-    if JSONResponse(status_code=200):
+
+    if JSONResponse(status_code=200): #retorna o link e uma mensagem avisando que o email foi enviado
         return link, {"email foi enviado"}
     
