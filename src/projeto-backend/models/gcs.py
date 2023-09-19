@@ -2,7 +2,6 @@ import mimetypes
 import os
 from fastapi import FastAPI, UploadFile
 from google.cloud import storage
-import magic
 
 ## Google cloud storage service
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'gcs-key.json'

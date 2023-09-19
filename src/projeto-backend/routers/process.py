@@ -11,7 +11,7 @@ router = APIRouter(tags=["Processes"])
 ## Processos rotas
 
 
-@router.get("/processes/{id}", response_model=Optional[schemas.ProcessAll])
+@router.get("/processes/{id}", response_model=Optional[schemas.Process])
 def get_process(
     current_user: Annotated[schemas.User, Depends(oauth2.get_current_user)],
     id: int,

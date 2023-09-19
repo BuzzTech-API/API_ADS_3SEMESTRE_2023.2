@@ -4,9 +4,9 @@ export default class User {
     private _name: string
     private _role: string
     private _team: string
+    private _email: string
     private _is_active: boolean
     private _id: number
-    
     
     private _processes: Array<Process> = []
     
@@ -15,12 +15,16 @@ export default class User {
         team: string,
         is_active: boolean,
         id: number,
+        email: string,
+        processes: Array<Process>
         ) {
         this._id = id
         this._name = name
         this._role = role
         this._team = team
         this._is_active = is_active
+        this._email = email
+        this._processes = processes
     }
 
     public get id(): number {
@@ -67,5 +71,11 @@ export default class User {
     }
     public set is_active(value: boolean) {
         this._is_active = value
+    }
+    public get email(): string {
+        return this._email
+    }
+    public set email(value: string) {
+        this._email = value
     }
 }

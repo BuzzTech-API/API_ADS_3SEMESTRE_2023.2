@@ -1,56 +1,21 @@
 import { Image, Flex, Center, Text, IconButton, Input } from "@chakra-ui/react"
-import { Search2Icon, AddIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { Search2Icon, ChevronRightIcon } from '@chakra-ui/icons'
 
 import Logo from ".././assets/images/logo-ionichealth-1.png"
 import { useEffect, useState } from "react"
-import Process from ".././models/Process"
-import { ProcessInterface } from ".././interfaces/processInterface"
-import User from ".././models/User"
+import Process from "../models/Process"
+import FormP from "./FormProcess"
+import { getAllProcess } from "../services/process"
 
 
 function SideBar() {
     const [processes, setProcesses] = useState(new Array<Process>())
     useEffect(() => {
         (async () => {
-            const token = localStorage.getItem('access_token');
-            const response = await fetch('http://localhost:8000/processes', {
-                method: 'GET',
-                headers: {
-                  'Accept': 'application/json',
-                  'Authorization': `Bearer ${token}`,
-                }
-              })
-
-              if (response.ok) {
-                const content = await response.json()
-                console.log(content);
-                
-                const processList= new Array<Process>()
-                content.forEach( (item: ProcessInterface) => {
-                    const usersList= new Array<User>()
-                    item.users.forEach(element => {
-                        usersList.push(element.user)
-                    });
-                    processList.push(new Process(
-                        item.id,
-                        item.title,
-                        item.endingDate,
-                        item.createDate,
-                        item.lastUpdate,
-                        item.is_active,
-                        item.priority,
-                        item.status,
-                        item.steps,
-                        usersList
-                    )
-                        )
-                        
-                });
+            const processList = await getAllProcess()
+            if (processList) {
                 setProcesses(processList)
-            }else{
-                
-              }
-              
+            }
             })();
         }, [])
 
@@ -100,13 +65,8 @@ function SideBar() {
                         p="0"
                         icon={<Search2Icon />}>
                     </IconButton>
-                    <IconButton
-                        aria-label="Btn Add Processo"
-                        bg="#58595B"
-                        color="white"
-                        icon={<AddIcon />}
-                        _hover={{ color: "black", bg: "white" }}>
-                    </IconButton>
+                    <FormP sizeIcon="md" heightIcon={4} widthIcon={4} />
+
                 </Flex>
             </Flex>
 
@@ -121,7 +81,6 @@ function SideBar() {
 
                 {/* PROCESSO CRIADO */}
                 {processes.map( (process:Process) =>{
-                    console.log(process);
                     
                     return <Flex
                     align="center"

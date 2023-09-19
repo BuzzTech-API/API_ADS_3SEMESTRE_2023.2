@@ -18,6 +18,7 @@ class Process(Base):
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     title = Column(String(60))
+    objective= Column(String(200))
     endingDate = Column(Date)
     createDate = Column(Date)
     lastUpdate = Column(Date)
@@ -42,6 +43,7 @@ def create_process(db: Session, process: schemas.ProcessCreate):
     """Cria um novo processo no banco"""
     db_process = Process(
         title=process.title,
+        objective = process.objective,
         endingDate=process.endingDate,
         createDate=process.createDate,
         lastUpdate=process.lastUpdate,
@@ -61,6 +63,7 @@ def update_process(db: Session, process: schemas.Process):
 
     if db_process:
         db_process.title = process.title
+        db_process.objective = process.objective
         db_process.endingDate = process.endingDate
         db_process.createDate = process.createDate
         db_process.lastUpdate = process.lastUpdate
