@@ -54,9 +54,9 @@ function EtapaForm() {
           marginTop= "20px"
           type="submit"
           colorScheme="teal"
-          backgroundColor="#53c4cd" // Define a cor de fundo para #53c4cd
+          backgroundColor="#53c4cd"
           color="#333"
-          width="100%" // Faz o botão ocupar todo o espaço lateralmente
+          width="100%" 
         >
           Enviar
         </Button>
