@@ -105,7 +105,7 @@ const FormP = ({widthIcon, sizeIcon, heightIcon}: IconSettings) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
-    window.location.reload();
+    //window.location.reload();
     //Fetch backEnd
   };
   
@@ -190,15 +190,7 @@ const FormP = ({widthIcon, sizeIcon, heightIcon}: IconSettings) => {
                     <Box textAlign="center">
                       <FormControl id="deadline" mb={3}>
                         <FormLabel color="#ffffff" fontSize="20px" mb={1} ml={210}>Prazo</FormLabel>
-                          <DatePicker 
-                            showIcon
-                            selected={prazo}                          
-                            dateFormat="dd/MM/yyyy" //
-                            placeholderText="Selecione um Prazo"
-                            title="deadline"
-                            value={formData.deadline}
-                            onChange={(date) => setDeadline(date ? date : null)}
-                          />
+                        <Input bg='white' placeholder="Selecione a data" size="md" type="date"/>
                       </FormControl>
                       <Flex justifyContent="center" alignItems="center">
                         <FormControl id="priority" mb={5}>
@@ -222,7 +214,7 @@ const FormP = ({widthIcon, sizeIcon, heightIcon}: IconSettings) => {
                                 const setResponsible = ()=>{
                                   setResponsibleList(responsibleList.concat(user)) 
                                 }
-                                return <option onClick={setResponsible} value={user.id}>{user.name}</option>
+                                return <option onClick={setResponsible} key={user.id} value={user.id}>{user.name}</option>
                               })}
                               
                           </Select>

@@ -28,7 +28,7 @@ export const Home = () => {
 
         <Grid marginLeft='1rem' templateColumns='repeat(4, 1fr)' gap='1.5rem' >
             {processes.map((process:Process) =>{
-                return <CardProcess 
+                return <CardProcess key={process.id}
                 process={process}                
                 />
                 
