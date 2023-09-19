@@ -10,21 +10,10 @@ from dotenv import dotenv_values
 #credenciais
 credentials = dotenv_values("./.env")
 
-class User(BaseModel):
-    name: str
-    email: str
-    role: str
-    team: str
-    is_active: bool
-    id: int
-
 
 class EmailSchema(BaseModel):
     email: List[EmailStr]
 
-class EmailContent(BaseModel):
-    message: str
-    subject: str
 
 conf = ConnectionConfig(
     MAIL_USERNAME = credentials['EMAIL'],
@@ -37,10 +26,3 @@ conf = ConnectionConfig(
     USE_CREDENTIALS = True,
     VALIDATE_CERTS = True
 )
-
-
-html = """
-<h5>Thanks for using Fastapi-mail</h5>
-<br>
-<
-"""

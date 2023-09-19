@@ -1,6 +1,6 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box,
          Button,
          FormControl,
@@ -17,7 +17,11 @@ import { Box,
          ModalBody,
          ModalCloseButton,
          Select,
-         Flex} from '@chakra-ui/react';
+         Flex,
+         useDisclosure,
+         IconButton} from '@chakra-ui/react';
+import { AddIcon, CloseIcon } from "@chakra-ui/icons";
+import User from "../models/User";
 
 //Interface para manipulação dos dados
 interface FormData {
@@ -29,8 +33,50 @@ interface FormData {
   responsible: string;
 }
 
+interface IconSettings{
+  widthIcon: number,
+  sizeIcon: string,
+  heightIcon: number
+}
+
 //Função Principal
-const FormP: React.FC = () => {
+const FormP = ({widthIcon, sizeIcon, heightIcon}: IconSettings) => {
+
+
+
+
+  const [usersList, setUsersList] = useState(new Array<User>())
+  const [responsibleList, setResponsibleList] = useState(new Array<User>())
+  useEffect(() => {
+    (async () => {
+        const token = localStorage.getItem('access_token');
+        const response = await fetch('http://localhost:8000/users', {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'Authorization': `Bearer ${token}`,
+            }
+          })
+
+          if (response.ok) {
+            const content: Array<User> = await response.json()
+            setUsersList(content)
+            
+        }else{
+            
+          }
+          
+        })();
+    }, [])
+
+
+    
+
+
+
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const [formData, setFormData] = useState<FormData>({
     title: '',
     description: '',
@@ -59,14 +105,13 @@ const FormP: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
+    window.location.reload();
     //Fetch backEnd
   };
   
   //Variáveis para o Modal
-  const [isOpen, setIsOpen] = React.useState(false);
   
-  const onClose = () => setIsOpen(false);
-  const onOpen = () => setIsOpen(true);
+
 
   //Variável para o Calendário "DatePicker"
   const [prazo, setDeadline] = useState<null | Date>(null);
@@ -75,8 +120,19 @@ const FormP: React.FC = () => {
   const [priority, setPrioridade] = useState("Alta");
 
 //Retorno em HTML do Formulário
-  return (
-    <Modal size="xxl" isOpen={true} onClose={onClose}>
+  return (<>
+    <IconButton margin=''
+                                    aria-label="Btn Add Processo"
+                                    bg="#58595B"
+                                    color="white"
+                                    size={sizeIcon}
+                                    icon={<AddIcon h={heightIcon} w={widthIcon} />}
+                                    _hover={{ color: "#58595B", bg: "white" }}
+                                    onClick={onOpen}
+                                    >
+                                        
+    </IconButton>
+    <Modal size="xxl" isOpen={isOpen} onClose={onClose}>
         
       <ModalOverlay/>
         
@@ -106,7 +162,7 @@ const FormP: React.FC = () => {
                           title="title"
                           value={formData.title}
                           onChange={handleChange}
-                        />
+                          />
                     </FormControl>
                     <FormControl id="description" mb={3}>
                       <FormLabel color="#ffffff" fontSize="20px" mb={1} ml={5}>Descrição</FormLabel>
@@ -129,7 +185,7 @@ const FormP: React.FC = () => {
                           title="objective"
                           value={formData.objective}
                           onChange={handleChange}
-                        />
+                          />
                     </FormControl>
                     <Box textAlign="center">
                       <FormControl id="deadline" mb={3}>
@@ -158,14 +214,50 @@ const FormP: React.FC = () => {
                       </Flex>
                       <FormControl id="responsible" mb={3}>
                         <FormLabel color="#ffffff" fontSize="20px" mb={1} ml={5}>Responsável</FormLabel>
-                          <Input
-                            rounded="100px" 
-                            bg="#D9D9D9"
-                            type="text"
-                            title="responsible"
-                            value={formData.responsible}
-                            onChange={handleChange}
-                          />
+                          <Select  style={{ width: "100%", height: "40px" }} rounded="100px" color="#000000" bg="#D9D9D9"
+                            value={''}
+                            onChange={handleChangePrioridade}>
+                              <option value=""></option>
+                              {usersList.map( (user:User) => {
+                                const setResponsible = ()=>{
+                                  setResponsibleList(responsibleList.concat(user)) 
+                                }
+                                return <option onClick={setResponsible} value={user.id}>{user.name}</option>
+                              })}
+                              
+                          </Select>
+                          <Box>
+                          <Flex>
+                            {responsibleList.map((responsible: User)=>{
+                              const removeResponsible = ()=>{
+                                setResponsibleList(responsibleList.filter((item)=> item !== responsible))
+                              }
+                              return <Box 
+                              width='15rem' 
+                              height='3rem' 
+                              bg='#53C4CD' 
+                              alignContent='center' 
+                              padding='0.5rem' 
+                              borderRadius='2rem'
+                              marginTop='0.8rem'
+                              marginRight='0.5rem'
+                              >
+                                {responsible.name}
+                                <IconButton marginLeft='0.4rem'
+                                    aria-label="Btn Add Processo"
+                                    bg="white"
+                                    color="#58595B"
+                                    size='sm'
+                                    borderRadius='3rem'
+                                    icon={<CloseIcon />}
+                                    _hover={{ color: "white", bg: "#58595B" }}
+                                    onClick={removeResponsible}
+                                  />
+                              </Box>
+                            })}
+                          </Flex>
+                          </Box>
+                            
                       </FormControl>
                       <Button id="CreateButton" 
                         style={{ width: "90px", height: "35px" }}
@@ -183,6 +275,7 @@ const FormP: React.FC = () => {
           </Card>
         </ModalContent>
     </Modal>
+  </>
   );
 };
 
