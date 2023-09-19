@@ -78,25 +78,25 @@ async def create_upload_file(
 ):
     """Rota para fazer upload de algum arquivo"""
     link = await gcs.GCStorage().upload_file(file) #chama a função que o upload do arquivo para a nuvem
-
-
+    lista_emails = emails.split('&')
+    send_mail.EmailSchema = lista_emails
+    
     # mail
     html = """
-    <h5>Thanks for using Fastapi-mail</h5>
+    <h5>Processo</h5>
     <br>
-    <
+    <h5>Dados da evidencia</h5>
     """ 
-    #users_dict = [json.loads(user) for user in users]
-    #emails = [user['email'] for user in users_dict]
-    #print(emails)
-    #message = MessageSchema(
-    #subject="Fastapi-Mail module",
-    #recipients="",
-    #attachments=[file],
-    #body=html,
-    #subtype=MessageType.html)
 
-    #fm = FastMail()
-    #await fm.send_message(message)
-   # return JSONResponse(status_code=200, content={"message": "email has been sent"})
-    return link
+    message = MessageSchema(
+    subject="Fastapi-Mail module",
+    recipients=send_mail.EmailSchema,
+    attachments=[file],
+    body=html,
+    subtype=MessageType.html)
+
+    fm = FastMail()
+    await fm.send_message(message)
+    if JSONResponse(status_code=200):
+        return link, {"email foi enviado"}
+    
