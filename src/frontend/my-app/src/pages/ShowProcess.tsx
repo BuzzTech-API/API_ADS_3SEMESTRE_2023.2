@@ -52,7 +52,7 @@ export const ShowProcess = ()=>{
     </Box>
     <Flex
     width='92rem'
-    minHeight='50rem'
+    minHeight='48rem'
     marginLeft='1rem'
     marginTop='1.5rem'
     borderRadius='2rem'

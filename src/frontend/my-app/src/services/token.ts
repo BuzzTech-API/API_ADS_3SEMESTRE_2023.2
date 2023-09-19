@@ -51,7 +51,7 @@ export const verifyToken = async (authenticated: Authenticated) => {
       }
       else {
         localStorage.removeItem('access_token');
-        
+
         if (refresh_token) {
           return await refreshToken(authenticated)
         }
@@ -68,3 +68,17 @@ export const verifyToken = async (authenticated: Authenticated) => {
   }
 }
 
+export const loginToken = async (email: string, senha: string) => {
+  const response = await fetch('http://localhost:8000/login', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: 'grant_type=&username=' + email + '&password=' + senha + '&scope=&client_id=&client_secret='
+
+  });
+  const data = await response.json()
+  localStorage.setItem('access_token', data.access_token)
+  localStorage.setItem('refresh_token', data.refresh_token)
+}

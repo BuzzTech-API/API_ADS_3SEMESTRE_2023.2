@@ -61,9 +61,12 @@ export const getProcessById = async (id:number) => {
         
         
             const usersList= new Array<User>()
-            content.users.forEach(element => {
+            if (content.users!==undefined) {
+              content.users.forEach(element => {
                 usersList.push(element.user)
             });
+            }
+            
             const process = new Process(
                 content.id,
                 content.title,
