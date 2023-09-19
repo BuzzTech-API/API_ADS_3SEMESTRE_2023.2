@@ -1,4 +1,4 @@
-import { BrowserRouter, redirect, Route, Routes } from "react-router-dom"
+import { BrowserRouter, redirect, Route, Routes, Navigate } from "react-router-dom"
 import { Authenticated, verifyToken } from "../services/token"
 import { useEffect, useState } from "react"
 import { Home } from "../pages/Home"
@@ -27,18 +27,26 @@ export function AuthValidation() {
         checkAuthentication()
     },[])
 
-    return ()
+    return (
+        
+    )
 }
 
+
+function RequireAuth({ children }) {
+    const { authed } = AuthValidation();
+  
+    return authed === true ? children : <Navigate to="/login" replace />;
+  }
 
 export function Router(){
     return(
         <BrowserRouter basename="/app">
             <Routes>
                 <Route path="/" element={
-                    <AuthValidation>
+                    <RequireAuthentication>
                         <Home/>
-                    </AuthValidation>
+                    </RequireAuthentication>
                 }
             </Routes>
       </BrowserRouter>
