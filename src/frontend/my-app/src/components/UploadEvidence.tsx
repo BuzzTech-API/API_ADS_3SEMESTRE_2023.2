@@ -26,9 +26,9 @@ export const ModalUploadEvidence = ({idRequestForEvidence, idProcess}:ModalUploa
                 'Accept': 'application/json',
                 'Authorization': `Bearer ${token}`,
             }
-            })
+            }) //pega o processo pelo id
 
-            const content: ProcessInterface = await response.json()
+            const content: ProcessInterface = await response.json() //pega a lista de processos e separa os usuários responsáveis
             const usersList = new Array<User>()
             content.users.forEach(element => {usersList.push(element.user)});
 
@@ -44,7 +44,7 @@ export const ModalUploadEvidence = ({idRequestForEvidence, idProcess}:ModalUploa
                 usersList.map((user : User) => {
                     host = host + user.email + "&"
                     return host
-                })
+                }) //separa o email de todos os responsáveis pelo processo e coloca depois de "uploadfile/""
 
                 const response = await fetch (
                     host,{
