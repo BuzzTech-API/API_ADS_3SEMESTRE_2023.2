@@ -13,6 +13,7 @@ import { PageModal } from './pages/ModalPage'
 import { ModalSolicitaEvidencia } from './components/Modal/BtnPedirEvidencia'
 import { ModalUploadEvidence } from './components/UploadEvidence'
 import { Authenticated, verifyToken } from './services/token'
+import { ShowProcess } from './pages/ShowProcess';
 
 
 const root = ReactDOM.createRoot(
@@ -62,6 +63,10 @@ const router = createBrowserRouter(
               {
                   path: '/modal2',
                   element: <ModalSolicitaEvidencia />
+              },
+              {
+                  path:'/process/:id',
+                  element: < ShowProcess />
               }
           ]
       },

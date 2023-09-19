@@ -8,7 +8,6 @@ export default class User {
     private _is_active: boolean
     private _id: number
     
-    
     private _processes: Array<Process> = []
     
     constructor(name: string,
@@ -17,6 +16,7 @@ export default class User {
         is_active: boolean,
         id: number,
         email: string,
+        processes: Array<Process>
         ) {
         this._id = id
         this._name = name
@@ -24,6 +24,7 @@ export default class User {
         this._team = team
         this._is_active = is_active
         this._email = email
+        this._processes = processes
     }
 
     public get id(): number {
