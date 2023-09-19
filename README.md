@@ -51,7 +51,7 @@
 ### 	:art: Wireframe do Programa
 
 <br>
-Em Desenvolvimento :warning:
+Em Desenvolvimento :hammer_and_wrench:
 
 <br>
 
@@ -118,13 +118,10 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 ## :date: Sprints <a id="sprint"></a>
 
 🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Em desenvolvimento! :hammer_and_wrench:
+🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Não iniciado  :ballot_box_with_check:
+🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Não iniciado  :ballot_box_with_check:
+🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Não iniciado :ballot_box_with_check:
 
-<!-- 
-🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Concluído :white_check_mark:
-🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Concluído :white_check_mark:
-🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Concluído :white_check_mark:
-🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Concluído :white_check_mark:
- -->
 
 
 
@@ -161,7 +158,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 ## :round_pushpin: Roadmap<a id='roadmap'></a>
 
 
-<img src="https://github.com/BuzzTech-API/API_ADS_2SEMESTE_2023.1/blob/main/doc/img/roadmap04.png?raw=true" alt="Roadmap" style="zoom: 150%;" />
+<img src="" alt="Roadmap" style="" />
 
 
 <br>
@@ -173,6 +170,10 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 | Catarina, 39 anos, professora de Geografia do ensino fundamental  |
 | :----------------------------------------------------------: |
 | Catarina tem 40 alunos por turma. Atualmente, ela leciona em quatro turmas na escola estadual João Leme e três turmas na escola estadual Ary Barroso. Ela não tem experiência aprofundada com computador, conhecendo, somente, o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook em sala de aula para realizar algumas atividades. Para cada turma, ela costuma aplicar duas provas e dois trabalhos, totalizando quatro atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, como também, gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
+
+| Testem, 26 anos, teste |
+| :---------------------------|
+| Lorem ipsum dolor sit amet. Non aliquam rerum sit rerum nobis aut amet rerum cum odio consequatur sit consectetur placeat At ipsa doloremque. Sed dolor corrupti rem cumque voluptatibus qui dolores expedita qui fuga quasi quo autem voluptas. Ea ipsum minima nam galisum commodi est magni adipisci quo possimus minima cum eveniet quod est libero aliquam et fuga inventore. Non harum galisum quo dolorem quae quo laboriosam enim id debitis aperiam aut asperiores tempore. |
 
 
 <br>
@@ -201,17 +202,17 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 ## :mortar_board: Equipe <a id="equipe"></a>
 
-
+<!--  -->
 
 |      Membro      |    Função     |                            Github                            |                           Linkedin                           |
 | :--------------: | :-----------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |    Isaque da Silva    | Scrum Master  | <a href="https://github.com/KhovetS2"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/isaque-elis-da-silva-2a4087226/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-|  Cláudia Secco   | Product Owner | <a href="https://github.com/ClaudiaCBS"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/cl%C3%A1udia-braga-79b6b2278/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |      
-|   Alícea Rocha   | Desenvolvedor | <a href="https://github.com/alicearocha"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/al%C3%ADcea-paula-de-lima-rocha-bab682157/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Danilo Rodrigues | Desenvolvedor | <a href="https://github.com/Circerion"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/danilo-baptistella-5757aa20a"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Joice de Araújo  | Desenvolvedor | <a href="https://github.com/Joice-Araujo"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/joice-aparecida-581226250"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Jacqueline Bezerra | Desenvolvedor | <a href="https://github.com/jxqlnm"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/jacqueline-mariane"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Vitor Lima  | Desenvolvedor | <a href="https://github.com/lima2206"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/vitor-spricigo-lima-84a377184"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|  Vitor Lima  | Product Owner | <a href="https://github.com/lima2206"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/vitor-spricigo-lima-84a377184"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+|   Cauan Almeida   | Desenvolvedor | <a href="https://github.com/Tsundek"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Pedro Davi | Desenvolvedor | <a href="https://github.com/PedrohDavi"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Natanael Machado  | Desenvolvedor | <a href="https://github.com/NatanaelSM"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Ivan Duarte | Desenvolvedor | <a href="https://github.com/Ivan-Duarte"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Nilber Siqueira | Desenvolvedor | <a href="https://github.com/NilberSiqueira"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 
 <br>
 
@@ -221,4 +222,4 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 | PO²              | M²       |
 | :-------------------: | :-----------: |
-| <a href='https://github.com/giulianobertoti'>Prof. Giuliano Araujo Bertoti</a> | <a href='https://cnpj.services/qsa/claudionor-etelvino-de-lima'>Prof.  Claudio Etelvino de Lima</a> |
+| <a href='https://github.com/fmasanori'>Prof. Fernando Masanori</a> | <a href='https://cnpj.services/qsa/claudionor-etelvino-de-lima'>Prof.  Claudio Etelvino de Lima</a> |
