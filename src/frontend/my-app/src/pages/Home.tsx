@@ -7,6 +7,9 @@ import User from "../models/User"
 //import { CardBase } from "../components/Card/cardBase"
 import { AddIcon } from "@chakra-ui/icons"
 import { getAllProcess } from "../services/process"
+import { CardBase } from "../components/Card/cardBase"
+import { CardProcess } from "../components/Card/cardProcesso"
+import FormP from "../components/FormProcess"
 
 export const Home = () => {
     const [processes, setProcesses] = useState(new Array<Process>())
@@ -26,14 +29,12 @@ export const Home = () => {
     return(<div>
 
         <Grid marginLeft='1rem' templateColumns='repeat(4, 1fr)' gap='1.5rem' >
-            {/* {processes.map((process:Process) =>{
-                return <CardProcess 
+        {processes.map((process:Process) =>{
+                return <CardProcess key={process.id}
                 process={process}                
                 />
                 
 
-            })} */}
-            {/* <CardBase>
             })}
             <CardBase width="20rem" height="25rem">
                 <Box padding='0' width='100%' height='100%'>
@@ -44,7 +45,7 @@ export const Home = () => {
                     </Center>
                     
                 </Box>
-            </CardBase> */}
+            </CardBase> 
             
         </Grid>
     </div>
