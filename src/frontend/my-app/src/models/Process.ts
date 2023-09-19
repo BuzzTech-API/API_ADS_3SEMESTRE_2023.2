@@ -2,40 +2,70 @@ import Step from "./Steps";
 import User from "./User";
 
 export default class Process {
-    private _id: number;
-    private _title: string;
-    private _endingDate: Date;
-    private _createDate: Date;
-    private _lastUpdate: Date;
-    private _is_active: boolean;
-    private _priority: string;
-    private _status: string;
-    private _steps: Array<Step>;
-    private _users: Array<User>;
-    
+    private _id!: number;
+    private _title!: string;
+    private _objective!: string;
+    private _endingDate!: Date;
+    private _createDate!: Date;
+    private _lastUpdate!: Date;
+    private _is_active!: boolean;
+    private _priority!: string;
+    private _status!: string;
+    private _steps!: Array<Step>;
+    private _users!: Array<User>;
     
     constructor(
         id: number,
         title: string,
+        objective: string,
         endingDate: Date,
         createDate: Date,
         lastUpdate: Date,
-        is_active: boolean = true,
+        is_active: boolean,
         priority: string,
         status: string,
         steps: Array<Step>,
         users: Array<User> 
+        )
+    constructor()
+    constructor(
+        id?: number,
+        title?: string,
+        objective?: string,
+        endingDate?: Date,
+        createDate?: Date,
+        lastUpdate?: Date,
+        is_active?: boolean,
+        priority?: string,
+        status?: string,
+        steps?: Array<Step>,
+        users?: Array<User> 
         ) {
-        this._id = id
-        this._title = title
-        this._endingDate = endingDate
-        this._createDate = createDate
-        this._lastUpdate = lastUpdate
-        this._is_active = is_active
-        this._priority = priority
-        this._status = status
-        this._steps = steps
-        this._users = users
+        if (id!==undefined &&
+            title!==undefined &&
+            endingDate!==undefined &&
+            createDate!==undefined &&
+            lastUpdate!==undefined &&
+            is_active!==undefined &&
+            priority!==undefined &&
+            status!==undefined &&
+            steps!==undefined &&
+            users!==undefined &&
+            objective!==undefined) {
+            
+                this._id = id
+                this._title = title
+                this._objective = objective
+                this._endingDate = endingDate
+                this._createDate = createDate
+                this._lastUpdate = lastUpdate
+                this._is_active = is_active
+                this._priority = priority
+                this._status = status
+                this._steps = steps
+                this._users = users
+        }
+
     }
     
 
@@ -104,6 +134,13 @@ export default class Process {
     }
     public set steps(value: Array<Step>) {
         this._steps = value;
+    }
+
+    public get objective(): string {
+        return this._objective;
+    }
+    public set objective(value: string) {
+        this._objective = value;
     }
 
 

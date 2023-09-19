@@ -40,7 +40,9 @@ class RequestForEvidence(RequestForEvidenceBase):
 class StepBase(BaseModel):
     name: str
     endDate: date
+    endingDate: date
     process_id: int
+    objective: str
     priority: str
     order: int
     is_active: bool
@@ -58,6 +60,7 @@ class Step(StepBase):
 
 class ProcessBase(BaseModel):
     title: str
+    objective: str
     endingDate: date
     createDate: date
     lastUpdate: date
