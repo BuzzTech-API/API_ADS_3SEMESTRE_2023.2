@@ -54,6 +54,7 @@ services:
       image: node:20
       restart: always
       command: "npm start"
+      container_name: frontend
       user: "node"
       working_dir: /home/node/app
       environment:
