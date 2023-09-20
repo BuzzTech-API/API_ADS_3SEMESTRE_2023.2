@@ -2,8 +2,14 @@ services:
   db:
     image: postgres
     restart: always
+    container_name: dbPostgres
     secrets:
       - db-password
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "api", "-U", "postgres"]
+      interval: 3s
+      retries: 5
+      start_period: 30s
     volumes:
       - db-data:/var/lib/postgresql/data
     networks:
@@ -20,27 +26,63 @@ services:
   adminer:
     image: adminer
     restart: always 
+    container_name: adminer
     ports:
       - 8080:8080
     networks:
       - backnet
   
+#  frontend:
+#    build:
+#      context: SOGAP-React
+#      target: frontend
+#    container_name: frontend
+#    restart: always
+#    command: "npm start"
+#    user: "node"
+#    environment:
+#      - NODE_ENV=production
+#    volumes:
+#      - ./SOGAP-React:/app
+#    ports:
+#      - 3000:3000
+#    networks:
+#      - backnet
+
+
   frontend:
-    image: node:20
-    restart: always
-    command: "npm start"
-    user: "node"
-    working_dir: /home/node/app
-    environment:
-      - NODE_ENV=production
+      image: node:20
+      restart: always
+      command: "npm start"
+      user: "node"
+      working_dir: /home/node/app
+      environment:
+        - NODE_ENV=production
+      volumes:
+        - ./SOGAP-React:/home/node/app
+      ports:
+        - 3000:3000
+      networks:
+        - backnet
+
+
+  myapp:
+    build:
+      context: SOGAP-Process-Service
+      target: builder
+
+    container_name: processBack
     volumes:
-      - ./frontend/my-app:/home/node/app
+      - ./SOGAP-Process-Service:/app
     ports:
-      - 3000:3000
+      - 8000:8000
     networks:
-      - backnet
-    
-        
+      - backnet  
+    expose:
+      - 8000
+    depends_on:
+      db:
+        condition: service_healthy
 
 
 volumes:
