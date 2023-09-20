@@ -7,8 +7,7 @@ import {
     Card,
     FormControl,
     FormLabel,
-    Center
-    
+    Center,
 } from '@chakra-ui/react'
 import {useState} from "react";
 
