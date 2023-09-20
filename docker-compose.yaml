@@ -73,7 +73,7 @@ services:
 
     container_name: processBack
     volumes:
-      - ./SOGAP-Process-Service:/app
+      - ./SOGAP-Process-Service:/code
     ports:
       - 8000:8000
     networks:
