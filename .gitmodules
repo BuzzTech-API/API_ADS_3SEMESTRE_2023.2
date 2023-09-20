@@ -1,0 +1,6 @@
+[submodule "SOGAP-React"]
+	path = SOGAP-React
+	url = https://github.com/BuzzTech-API/SOGAP-React.git
+[submodule "SOGAP-Process-Service"]
+	path = SOGAP-Process-Service
+	url = https://github.com/BuzzTech-API/SOGAP-Process-Service.git
