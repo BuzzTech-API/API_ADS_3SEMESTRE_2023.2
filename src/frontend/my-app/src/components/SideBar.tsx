@@ -1,7 +1,6 @@
 import { Image, Flex, Center, Text, IconButton, Input } from "@chakra-ui/react"
 import { Search2Icon, ChevronRightIcon } from '@chakra-ui/icons'
 
-import Logo from ".././assets/images/logo-ionichealth-1.png"
 import { useEffect, useState } from "react"
 import Process from "../models/Process"
 import FormP from "./FormProcess"
@@ -33,7 +32,7 @@ function SideBar() {
             <Center
                 mt="80px"
                 mb="50px">
-                <Image src={Logo} alt="Logo Ionic Health"></Image>
+                <Image src="../assets/images/logo-ionichealth-1.png"  alt="Logo Ionic Health"></Image>
             </Center>
 
 

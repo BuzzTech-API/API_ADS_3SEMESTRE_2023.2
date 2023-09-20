@@ -1,8 +1,12 @@
-import { BrowserRouter, redirect, Route, Routes, Navigate } from "react-router-dom"
+import { BrowserRouter, redirect, Route, Routes, Navigate, Outlet } from "react-router-dom"
 import { Authenticated, verifyToken } from "../services/token"
-import { useEffect, useState } from "react"
+import { PropsWithChildren, useEffect, useState } from "react"
 import { Home } from "../pages/Home"
+import { Login } from "../pages/Login"
+import { ModalSolicitaEvidencia } from "../components/Modal/BtnPedirEvidencia"
+import { ShowProcess } from "../pages/ShowProcess"
 
+// Valida o token
 const validateAccessToken = async () => {
     let authenticated = new Authenticated()
     return verifyToken(authenticated).then(() => {
@@ -10,9 +14,10 @@ const validateAccessToken = async () => {
     }).catch(() => {
         return false
     })
-  }
+}
 
-export function AuthValidation() {
+// Verifica se o usuário está autenticado. Se o usuário não estiver autenticado ele é jogado para a tela de login, caso contrário é jogado para a página que quiser
+export function RequireAuth() {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
 
@@ -27,27 +32,23 @@ export function AuthValidation() {
         checkAuthentication()
     },[])
 
-    return (
-        
-    )
+    return isAuthenticated === true ? <Outlet/> : <Navigate to="/login" replace />
+    //return <Outlet/> use esse return para testar (caso o backend não rodar)
 }
 
-
-function RequireAuth({ children }) {
-    const { authed } = AuthValidation();
-  
-    return authed === true ? children : <Navigate to="/login" replace />;
-  }
+   
 
 export function Router(){
     return(
-        <BrowserRouter basename="/app">
+        <BrowserRouter>
             <Routes>
-                <Route path="/" element={
-                    <RequireAuthentication>
-                        <Home/>
-                    </RequireAuthentication>
-                }
+                <Route path="/login" element={<Login/>}/>
+                <Route element={<RequireAuth/>}>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/modal2" element={<ModalSolicitaEvidencia />}/>
+                    <Route path="/process/:id" element={<ShowProcess/>}/>
+                </Route>
+                {/* <Route path="*" element={<ErrorPage/>}/> */}
             </Routes>
       </BrowserRouter>
     )
