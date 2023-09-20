@@ -29,7 +29,7 @@ export const Home = () => {
     return(<div>
 
         <Grid marginLeft='1rem' templateColumns='repeat(4, 1fr)' gap='1.5rem' >
-        {processes.map((process:Process) =>{
+            {processes.map((process:Process) =>{
                 return <CardProcess key={process.id}
                 process={process}                
                 />
