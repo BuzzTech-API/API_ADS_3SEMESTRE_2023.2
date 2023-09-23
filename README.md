@@ -117,13 +117,13 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 ## :date: Sprints <a id="sprint"></a>
 
-🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Em desenvolvimento! :hammer_and_wrench:
+🔖 SPRINT 1:  Em desenvolvimento! :hammer_and_wrench:
 
-🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Não iniciado  :ballot_box_with_check:
+🔖 SPRINT 2:  Não iniciado  :ballot_box_with_check:
 
-🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Não iniciado  :ballot_box_with_check:
+🔖 SPRINT 3:  Não iniciado  :ballot_box_with_check:
 
-🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Não iniciado :ballot_box_with_check:
+🔖 SPRINT 4:  Não iniciado  :ballot_box_with_check:
 
 
 
@@ -134,25 +134,19 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 
 
-|                            Tarefa                            |                          Descrição                           |               Histórias de Usuários                | Prioridade | Sprint | Estimativa de Esforço |       Status       |
-| :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------: | :--------: | :----: | :-------------------: | :----------------: |
-|                Montagem do Wireframe                | Criar um wireframe simples e objetivo, servindo como uma representação visual da estrutura do software e das suas funcionalidades. O objetivo é obter um feedback rápido sobre o layout e a organização das informações, antes de iniciar o processo de design detalhado. | <a href='#us01'>US01</a> |   Média    |   1    |          4h           | :white_check_mark: |
-|                Diagrama de Classes UML                | Desenvolver o Diagrama de Classes UML. Este diagrama mostra a relação entre as classes Turmas, Alunos e Atividades e os atributos e métodos de cada uma. | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   Média    |   1    |          8h           | :white_check_mark: |
-|            Cadastro das turmas            | Criação do protótipo do software que cadastra as turmas. |              <a href='#us02'>US02</a>              |    Média    |   1    |         4h          | :white_check_mark: |
-|            Cadastro dos alunos            | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :white_check_mark: |
-|         Cadastro das atividades          | Criação do protótipo do software para cadastrar as atividades entregues por cada aluno. |              <a href='#us04'>US04</a>              |    Média    |   1    |          8h          | :white_check_mark: |
-|                Interface gráfica das turmas                | Criação no Swing da interface gráfica do software que cadastra as turmas. | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   Baixa    |   1    |          2h           | :white_check_mark: |
-|            Interface gráfica dos alunos            | Criação no Swing da interface gráfica do software que cadastra os alunos de cada turma. |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>              |    Baixa    |   1    |         2h          | :white_check_mark: |
-|         Interface gráfica das atividades          | Criação no Swing da interface gráfica do software que cadastra as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Média    |   1    |          4h          | :white_check_mark: |
-|                Diagrama do Modelo Conceitual e Lógico do Banco de Dados                | Desenvolver o Diagrama do Modelo Conceitual e Lógico do Banco de Dados. Estes modelos são criados na fase inicial do desenvolvimento de um sistema e são usados para fornecer uma visão geral das principais entidades envolvidas no negócio. | <a href='#us08'>US08</a> |   Média    |   1    |          4h           | :white_check_mark: |
-|   Registrar Atividade Entregue pelo Aluno | Desenvolver uma tela onde registre as atividades que foram entregues pelos alunos. | <a href='#us09'>US09</a> |   Alta    |   2    |          16h           | :white_check_mark: |
-|   Visualizar informações da Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|   Visualizar informações dos Alunos | Desenvolver uma tela onde mostre as atividades entregues do aluno. | <a href='#us11'>US11</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|  Visualizar informações das Atividades | Desenvolver uma tela onde mostre as informações das atividades. | <a href='#us12'>US12</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|   Editar e Excluir Turmas | Desenvolver uma tela onde seja possível editar ou excluir as atividades da turma. | <a href='#us05'>US05</a> |   Média    |   3    |          4h           | :white_check_mark: |
-|   Editar e Excluir Alunos | Desenvolver uma tela onde seja possível editar ou excluir as atividades do aluno. | <a href='#us06'>US06</a> |   Média    |   3    |          4h           | :white_check_mark: |
-|  Editar e Excluir Atividades | Desenvolver uma tela onde seja possível editar ou excluir as atividades. | <a href='#us07'>US07</a> |   Média    |   3    |          4h           | :white_check_mark: |
-|  Testes | Testar as funcionalidades do software para verificar possíveis erros e corrigi-los. | <a href='#us13'>US13</a> |   Média    |   4    |          4h           | :white_check_mark: |
+|    Tarefa    |    Descrição    |               Histórias de Usuários                | Sprint | Estimativa de Esforço |       Status       |
+| :----------: | :-------------: | :------------------------------------------------: | :----: | :-------------------: | :----------------: |
+|  Criar Processos  | Abertura de um novo processo | <a href='#us01'>US01</a> |  1    |          4h           | :white_check_mark: |
+|  Criar Etapas  | Abertura de uma nova etapa | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   1    |          8h           | :white_check_mark: |
+|  Fornecer Evidências  | Anexação de evidências dentro de uma etapa |              <a href='#us02'>US02</a>              |   1    |         4h          | :white_check_mark: |
+|  Notificar Prazo  | Notificação de prazos |              <a href='#us03'>US03</a>              |   1    |         4h          | :white_check_mark: |
+|  Alterar Processos  | Editar e Reorganizar processos e seu conteúdo |              <a href='#us04'>US04</a>              |   1    |          8h          | :white_check_mark: |
+|  Cadastrar Usuários  | Cadastro / Login de usuários | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   1    |          2h           | :white_check_mark: |
+|  Filtrar Processos  | Filtro de Processos |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>|   1    |         2h          | :white_check_mark: |
+|  Visualizar Detalhes  | Painel de visualização de detalhes |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>|  1    |          4h          | :white_check_mark: |
+|  Visualizar Histórico | Visualizar histórico de informações chave de um ou mais Processos / Etapas | <a href='#us08'>US08</a> |   1    |          4h           | :white_check_mark: |
+|  Gerar Relatório  | Gerar um relatório com informações chave de um ou mais Processos / Etapas  | <a href='#us09'>US09</a> |   2    |          16h           | :white_check_mark: |
+|  Exportar Relatório  |  Exportar o Relatório para fora da aplicação  | <a href='#us10'>US10</a> |   2    |          8h           | :white_check_mark: |
 
 
 <br>
@@ -170,9 +164,9 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 
 
-| Catarina, 39 anos, professora de Geografia do ensino fundamental  |
+| Colaborador  |
 | :----------------------------------------------------------: |
-| Catarina tem 40 alunos por turma. Atualmente, ela leciona em quatro turmas na escola estadual João Leme e três turmas na escola estadual Ary Barroso. Ela não tem experiência aprofundada com computador, conhecendo, somente, o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook em sala de aula para realizar algumas atividades. Para cada turma, ela costuma aplicar duas provas e dois trabalhos, totalizando quatro atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, como também, gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
+| , ela leciona em quatro turmas na escola estadual João Leme e três turmas na escola estadual Ary Barroso. Ela não tem experiência aprofundada com computador, conhecendo, somente, o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook em sala de aula para realizar algumas atividades. Para cada turma, ela costuma aplicar duas provas e dois trabalhos, totalizando quatro atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, como também, gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
 
 | Testem, 26 anos, teste |
 | :---------------------------|
@@ -184,22 +178,22 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 ## :key: Histórias de Usuário<a id="historia"></a>
 
 
-
 |          ID           |                     História de Usuário                      |
 | :-------------------: | :----------------------------------------------------------: |
-| US01<a id='us01'></a> | Catarina, professora, precisa de uma interface gráfica ágil e prática para interagir com o programa. |
-| US02<a id='us02'></a> | Catarina, professora, precisa cadastrar suas turmas de acordo com suas respectivas escolas. |
-| US03<a id='us03'></a> | Catarina, professora, precisa cadastrar seus alunos de acordo com suas respectivas turmas. |
-| US04<a id='us04'></a> | Catarina, professora, precisa cadastrar as atividades realizadas pelos seus alunos. |
-| US05<a id='us05'></a> | Catarina, professora, precisa editar ou excluir as turmas já cadastradas no programa. |
-| US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no programa. |
-| US07<a id='us07'></a> | Catarina, professora, precisa editar ou excluir as atividades já cadastradas no programa. |
-| US08<a id='us08'></a> | Catarina, professora, precisa de um ambiente de armazenamento virtual seguro para acumular todas as informações cadastradas. |
-| US09<a id='us09'></a> | Catarina, professora, precisa registrar quais alunos já entregaram as atividades avaliativas. |
-| US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes das turmas através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
-| US11<a id='us11'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
-| US12<a id='us12'></a> | Catarina, professora, precisa de uma lista que apresente quais são os alunos que estão devendo entregar atividades. |
-| US13<a id='us13'></a> | Catarina, professora, precisa de um software confiável e que não tenha problemas de desempenho. |
+| US01<a id='us01'></a> |Como um Gerente ou Diretor, quero criar uma nova instância de um processo para assim conseguir organiza-lo e documenta-lo através de suas etapas.|
+| US02<a id='us02'></a> |Como um Gerente ou Diretor quero criar Etapas dentro dos processos para assim poder organizar de forma linear o progresso do processo. |
+| US03<a id='us03'></a> |Como um Colaborador quero adicionar as Evidências corretas nas etapas para que a etapa tenha uma prova de que foi concluida com sucesso. |
+| US04<a id='us04'></a> | |
+| US05<a id='us05'></a> | |
+| US06<a id='us06'></a> | |
+| US07<a id='us07'></a> | |
+| US08<a id='us08'></a> | |
+| US09<a id='us09'></a> | |
+| US10<a id='us10'></a> | |
+| US11<a id='us11'></a> | |
+| US12<a id='us12'></a> | |
+| US13<a id='us13'></a> | |
+
 
 <br>
 
