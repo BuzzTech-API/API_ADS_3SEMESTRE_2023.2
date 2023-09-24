@@ -82,6 +82,7 @@ services:
       context: SOGAP-Process-Service
       target: builder
     working_dir: /code
+    restart: always
     container_name: processBack
     volumes:
       - ./SOGAP-Process-Service:/code

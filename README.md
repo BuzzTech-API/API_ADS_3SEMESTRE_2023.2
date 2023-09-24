@@ -1,5 +1,5 @@
 # API ADS 3º Semestre 
-# Nome do Projeto
+# Sistema
 
 
 <p align="center">
@@ -13,14 +13,14 @@
 <br>
 <p align="center">
   <a href ="#desafio"> Desafio </a>  |   
-  <a href ="#escopo"> Escopo </a>  |   
+  <!-- <a href ="#escopo"> Escopo </a>  |    -->
   <a href ="#metodologia"> Metodologia </a>  |
   <a href ="#mvp"> MVP </a>  |
   <a href ="#sprint"> Sprints </a>  |
   <a href ="#backlog"> Backlog do Produto </a>  | 
-  <a href ="#roadmap"> Roadmap </a>  |
+  <!-- <a href ="#roadmap"> Roadmap </a>  | -->
   <a href ="#personas"> Personas </a>  |
-  <a href ="#historia"> Histórias de usuário </a>  | 
+  <a href ="#historia"> Histórias de Usuário </a>  | 
   <a href ="#equipe"> Equipe </a>  |
   <a href ="#focal"> Focal Point </a>
 </p>
@@ -29,21 +29,25 @@
 
 
 <br>
-<!-- Colocar as tecnologias
+
 <h4 align="center">
- <a href="https://docs.oracle.com/en/java/"><img src = "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/></a>
+ <a href="https://www.typescriptlang.org"><img src = "https://img.shields.io/badge/TypeScript-3f80bf?style=for-the-badge&logo=TypeScript&logoColor=white"/></a>
+ <a href="https://react.dev"><img src = "https://img.shields.io/badge/React-3781b0?style=for-the-badge&logo=React&logoColor=white"/></a>
+ <a href="https://www.python.org"><img src = "https://img.shields.io/badge/Python-0009ba?style=for-the-badge&logo=Python&logoColor=white"/></a>
+ <a href="https://fastapi.tiangolo.com"><img src = "https://img.shields.io/badge/FastAPI-498c75?style=for-the-badge&logo=fastapi&logoColor=white"/></a>
+ <a href="https://www.docker.com"><img src = "https://img.shields.io/badge/Docker-0e0a8f?style=for-the-badge&logo=Docker&logoColor=white"/></a>
  <a href="https://docs.github.com/pt"><img src = "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
  <a href="https://help.figma.com/hc/en-us"><img src = "https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
- <a href="https://dev.mysql.com/doc/"><img src = "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/></a>
-</h4> -->
-
+ <a href="https://www.postgresql.org"><img src = "https://img.shields.io/badge/PostgreSQL-47678f?style=for-the-badge&logo=postgresql&logoColor=white"/></a>
+</h4>
 
 
 
 <br>
 <br>
 
-> Status do Projeto: Em desenvolvimento! :hammer_and_wrench: <!-- >:white_check_mark: -->
+> Status do Projeto: Em desenvolvimento! :hammer_and_wrench:
+
 <br>
 
 
@@ -55,13 +59,12 @@ Em Desenvolvimento :hammer_and_wrench:
 
 <br>
 
-<!-- https://user-images.githubusercontent.com/90930885/229379236-2301d570-b1f4-48e0-b01a-85aa8f1229b3.mp4 -->
 
-<br>
+
 
 
 ## :medal_sports: Desafio <a id="desafio"></a>
-<br>
+
 Desenvolver uma plataforma web que nos permita criar, monitorar e registrar cada etapa dos processos regulatórios essenciais para uma organização. O foco é garantir que todos os processos necessários, conforme definido pelo time de regulatório, estejam sendo rigorosamente cumpridos. A plataforma será um recurso valioso para rastrear o progresso, assegurando a conformidade e gerando evidências para cada etapa.
 
 <br>
@@ -117,13 +120,13 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 ## :date: Sprints <a id="sprint"></a>
 
-🔖 SPRINT 1 ([Link da Pasta](doc/sprints/sprint1)):  Em desenvolvimento! :hammer_and_wrench:
+🔖 SPRINT 1:  Em desenvolvimento! :hammer_and_wrench:
 
-🔖 SPRINT 2 ([Link da Pasta](doc/sprints/sprint2)):  Não iniciado  :ballot_box_with_check:
+🔖 SPRINT 2:  Não iniciado  :ballot_box_with_check:
 
-🔖 SPRINT 3 ([Link da Pasta](doc/sprints/sprint3)):  Não iniciado  :ballot_box_with_check:
+🔖 SPRINT 3:  Não iniciado  :ballot_box_with_check:
 
-🔖 SPRINT 4 ([Link da Pasta](doc/sprints/sprint4)):  Não iniciado :ballot_box_with_check:
+🔖 SPRINT 4:  Não iniciado  :ballot_box_with_check:
 
 
 
@@ -133,50 +136,52 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 ## :seedling: Backlog do Produto<a id="backlog"></a>
 
 
+<!-- Pontos de historia -->
 
-|                            Tarefa                            |                          Descrição                           |               Histórias de Usuários                | Prioridade | Sprint | Estimativa de Esforço |       Status       |
-| :----------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------: | :--------: | :----: | :-------------------: | :----------------: |
-|                Montagem do Wireframe                | Criar um wireframe simples e objetivo, servindo como uma representação visual da estrutura do software e das suas funcionalidades. O objetivo é obter um feedback rápido sobre o layout e a organização das informações, antes de iniciar o processo de design detalhado. | <a href='#us01'>US01</a> |   Média    |   1    |          4h           | :white_check_mark: |
-|                Diagrama de Classes UML                | Desenvolver o Diagrama de Classes UML. Este diagrama mostra a relação entre as classes Turmas, Alunos e Atividades e os atributos e métodos de cada uma. | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   Média    |   1    |          8h           | :white_check_mark: |
-|            Cadastro das turmas            | Criação do protótipo do software que cadastra as turmas. |              <a href='#us02'>US02</a>              |    Média    |   1    |         4h          | :white_check_mark: |
-|            Cadastro dos alunos            | Criação do protótipo do software para cadastrar os alunos de cada turma. |              <a href='#us03'>US03</a>              |    Média    |   1    |         4h          | :white_check_mark: |
-|         Cadastro das atividades          | Criação do protótipo do software para cadastrar as atividades entregues por cada aluno. |              <a href='#us04'>US04</a>              |    Média    |   1    |          8h          | :white_check_mark: |
-|                Interface gráfica das turmas                | Criação no Swing da interface gráfica do software que cadastra as turmas. | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   Baixa    |   1    |          2h           | :white_check_mark: |
-|            Interface gráfica dos alunos            | Criação no Swing da interface gráfica do software que cadastra os alunos de cada turma. |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>              |    Baixa    |   1    |         2h          | :white_check_mark: |
-|         Interface gráfica das atividades          | Criação no Swing da interface gráfica do software que cadastra as atividades entregues por cada aluno. |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>              |    Média    |   1    |          4h          | :white_check_mark: |
-|                Diagrama do Modelo Conceitual e Lógico do Banco de Dados                | Desenvolver o Diagrama do Modelo Conceitual e Lógico do Banco de Dados. Estes modelos são criados na fase inicial do desenvolvimento de um sistema e são usados para fornecer uma visão geral das principais entidades envolvidas no negócio. | <a href='#us08'>US08</a> |   Média    |   1    |          4h           | :white_check_mark: |
-|   Registrar Atividade Entregue pelo Aluno | Desenvolver uma tela onde registre as atividades que foram entregues pelos alunos. | <a href='#us09'>US09</a> |   Alta    |   2    |          16h           | :white_check_mark: |
-|   Visualizar informações da Turma | Desenvolver uma tela onde mostre as atividades entregues da turma. | <a href='#us10'>US10</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|   Visualizar informações dos Alunos | Desenvolver uma tela onde mostre as atividades entregues do aluno. | <a href='#us11'>US11</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|  Visualizar informações das Atividades | Desenvolver uma tela onde mostre as informações das atividades. | <a href='#us12'>US12</a> |   Alta    |   2    |          8h           | :white_check_mark: |
-|   Editar e Excluir Turmas | Desenvolver uma tela onde seja possível editar ou excluir as atividades da turma. | <a href='#us05'>US05</a> |   Média    |   3    |          4h           | :white_check_mark: |
-|   Editar e Excluir Alunos | Desenvolver uma tela onde seja possível editar ou excluir as atividades do aluno. | <a href='#us06'>US06</a> |   Média    |   3    |          4h           | :white_check_mark: |
-|  Editar e Excluir Atividades | Desenvolver uma tela onde seja possível editar ou excluir as atividades. | <a href='#us07'>US07</a> |   Média    |   3    |          4h           | :white_check_mark: |
-|  Testes | Testar as funcionalidades do software para verificar possíveis erros e corrigi-los. | <a href='#us13'>US13</a> |   Média    |   4    |          4h           | :white_check_mark: |
+
+|    Tarefa    |    Descrição    |               Histórias de Usuários                | Sprint | Estimativa de Esforço |       Status       |
+| :----------: | :-------------: | :------------------------------------------------: | :----: | :-------------------: | :----------------: |
+|  Criar Processos  | Abertura de um novo processo | <a href='#us01'>US01</a> |  1    |          4h           | :white_check_mark: |
+|  Criar Etapas  | Abertura de uma nova etapa | <a href='#us02'>US02</a> |   1    |          8h           | :white_check_mark: |
+|  Fornecer Evidências  | Anexação de evidências dentro de uma etapa | <a href='#us03'>US03</a> |   1    |         4h          | :white_check_mark: |
+|  Cadastrar Usuários  | Cadastro / Login de usuários | <a href='#us04'>US04 </a>, <a href='#us05'>US05</a> |   1    |          2h           | :white_check_mark: |
+|  Notificar Prazo  | Notificação de prazos | <a href='#us06'>US06 </a>, <a href='#us07'>US07 </a>, <a href='#us08'>US08 </a> |   2    |         4h          | :ballot_box_with_check: |
+|  Alterar Processos  | Editar e Reorganizar processos e seu conteúdo | <a href='#us09'>US09</a> |   2    |          8h          | :ballot_box_with_check: |
+|  Filtrar Processos  | Filtro de Processos | <a href='#us10'>US010</a> |   3    |         2h          | :ballot_box_with_check: |
+|  Visualizar Detalhes  | Painel de visualização de detalhes | <a href='#us011'>US011</a> |  3    |          4h          | :ballot_box_with_check:|
+|  Visualizar Histórico | Visualizar histórico de informações chave de um ou mais Processos / Etapas | <a href='#us012'>US12</a> |   3    |          4h           | :ballot_box_with_check: |
+|  Gerar Relatório  | Gerar um relatório com informações chave de um ou mais Processos / Etapas  | <a href='#us13'>US13</a> |   4    |          16h           | :ballot_box_with_check: |
+|  Exportar Relatório  |  Exportar o Relatório para fora da aplicação  | <a href='#us14'>US14</a> |   4    |          8h           | :ballot_box_with_check: |
 
 
 <br>
 
 
-## :round_pushpin: Roadmap<a id='roadmap'></a>
+<!-- ## :round_pushpin: Roadmap<a id='roadmap'></a>
 
 
 <img src="" alt="Roadmap" style="" />
 
 
-<br>
+<br> -->
 
 ## :moyai: Personas <a id='personas'></a>
 
+| C-Level |
+| :------:|
+| Eu, como **C-Level** da *Ionic Health*, tenho como foco principal é fornecer informações claras e precisas aos nossos investidores sobre como estamos gerenciando nossos processos e cumprindo nossos objetivos. Preciso de relatórios que comuniquem de forma eficaz nosso sucesso e conformidade. |
 
+| Gerente / Diretor |
+| :------:|
+| Eu, como **Gerente / Diretor** da *Ionic Health*, necessito da capacidade de criar, definir requisitos e acompanhar todos os detalhes dos projetos é fundamental para o sucesso da equipe. Preciso de uma ferramenta que me ajude a manter tudo sob controle de forma eficaz e eficiente. |
 
-| Catarina, 39 anos, professora de Geografia do ensino fundamental  |
-| :----------------------------------------------------------: |
-| Catarina tem 40 alunos por turma. Atualmente, ela leciona em quatro turmas na escola estadual João Leme e três turmas na escola estadual Ary Barroso. Ela não tem experiência aprofundada com computador, conhecendo, somente, o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook em sala de aula para realizar algumas atividades. Para cada turma, ela costuma aplicar duas provas e dois trabalhos, totalizando quatro atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, como também, gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
+| Líder / Gestor |
+| :----:|
+|Eu, como **Líder / Gestor** da *Ionic Health*, é essencial ter uma ferramenta que me permita adicionar novas etapas com clareza e eficiência aos processos existentes. Isso simplifica a adaptação e o gerenciamento dos processos em constante evolução. Também é imperativo que possa fazer requisições das evidências necessárias para a validação de tais etapas, isso torna possível acompanhar o progresso e garantir que todos estejam alinhados com nossas metas. |
 
-| Testem, 26 anos, teste |
-| :---------------------------|
-| Lorem ipsum dolor sit amet. Non aliquam rerum sit rerum nobis aut amet rerum cum odio consequatur sit consectetur placeat At ipsa doloremque. Sed dolor corrupti rem cumque voluptatibus qui dolores expedita qui fuga quasi quo autem voluptas. Ea ipsum minima nam galisum commodi est magni adipisci quo possimus minima cum eveniet quod est libero aliquam et fuga inventore. Non harum galisum quo dolorem quae quo laboriosam enim id debitis aperiam aut asperiores tempore. |
+| Colaborador  |
+| :----------: |
+| Eu, como **Colaborador** da *Ionic Health*, preciso de uma maneira fácil e eficaz de gerenciar todas as evidências necessárias nos processos da empresa. Uma notificação clara e instruções precisas são essenciais para garantir que eu possa fazer o meu trabalho de forma eficiente.  |
 
 
 <br>
@@ -184,22 +189,24 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 ## :key: Histórias de Usuário<a id="historia"></a>
 
 
-
 |          ID           |                     História de Usuário                      |
 | :-------------------: | :----------------------------------------------------------: |
-| US01<a id='us01'></a> | Catarina, professora, precisa de uma interface gráfica ágil e prática para interagir com o programa. |
-| US02<a id='us02'></a> | Catarina, professora, precisa cadastrar suas turmas de acordo com suas respectivas escolas. |
-| US03<a id='us03'></a> | Catarina, professora, precisa cadastrar seus alunos de acordo com suas respectivas turmas. |
-| US04<a id='us04'></a> | Catarina, professora, precisa cadastrar as atividades realizadas pelos seus alunos. |
-| US05<a id='us05'></a> | Catarina, professora, precisa editar ou excluir as turmas já cadastradas no programa. |
-| US06<a id='us06'></a> | Catarina, professora, precisa editar ou excluir os alunos já cadastradas no programa. |
-| US07<a id='us07'></a> | Catarina, professora, precisa editar ou excluir as atividades já cadastradas no programa. |
-| US08<a id='us08'></a> | Catarina, professora, precisa de um ambiente de armazenamento virtual seguro para acumular todas as informações cadastradas. |
-| US09<a id='us09'></a> | Catarina, professora, precisa registrar quais alunos já entregaram as atividades avaliativas. |
-| US10<a id='us10'></a> | Catarina, professora, precisa visualizar todas as informações relevantes das turmas através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
-| US11<a id='us11'></a> | Catarina, professora, precisa visualizar todas as informações relevantes dos alunos através de dados estatísticos das atividades cadastradas para apresentar em reuniões com a coordenação da escola. |
-| US12<a id='us12'></a> | Catarina, professora, precisa de uma lista que apresente quais são os alunos que estão devendo entregar atividades. |
-| US13<a id='us13'></a> | Catarina, professora, precisa de um software confiável e que não tenha problemas de desempenho. |
+| US01<a id='us01'></a> |Como um Gerente/Diretor, quero criar uma nova instância de um processo para assim conseguir organiza-lo e documenta-lo através de suas etapas.|
+| US02<a id='us02'></a> |Como um Gerente/Diretor quero criar Etapas dentro dos processos para assim poder organizar de forma linear o progresso do processo. |
+| US03<a id='us03'></a> |Como um Colaborador quero adicionar as Evidências corretas nas etapas para que a etapa tenha uma prova de que foi concluida com sucesso. |
+| US04<a id='us04'></a> |Como um Usuário Registrado, desejo fazer login na minha conta para acessar minhas tarefas e processos.|
+| US05<a id='us05'></a> |Como um Administrador do Sistema, desejo ter a capacidade de cadastrar novos usuários no aplicativo para que eles possam fazer login e acessar suas tarefas e processos.|
+| US06<a id='us06'></a> |Como um Gerente/Diretor, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em um processo que estou gerenciando, para que eu possa acompanhar os prazos e garantir que os processos sejam executados de acordo com as especificações e prazos estabelecidos.|
+| US07<a id='us07'></a> |Como um Líder/Gestor, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em uma etapa ou requisição de evidência que estou supervisionando, para que eu possa acompanhar os prazos e garantir que elas sejam concluídas pontualmente e com eficiência. |
+| US08<a id='us08'></a> |Como um Colaborador, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em uma etapa que estou envolvido, para que eu possa cumprir os prazos e fornecer as evidências necessárias para validar o cumprimento dos requisitos da etapa.|
+| US09<a id='us09'></a> |Como um Gerente/Diretor, desejo ter a capacidade de alterar e reorganizar os processos existentes, para que eu possa adaptar os processos às necessidades em constante evolução da minha equipe e da organização.|
+| US10<a id='us10'></a> |Como um Usuário, desejo ter a capacidade de filtrar processos ou etapas com base em critérios específicos, como status, data de criação ou outros atributos relevantes, para que eu possa rapidamente localizar os processos ou etapas que preciso gerenciar ou revisar com mais eficiência.|
+| US11<a id='us11'></a> |Como um Usuário, desejo ter acesso a um painel de visualização de detalhes que me permita ver informações-chave de um ou mais processos ou etapas nos quais estou envolvido, para que eu possa obter uma visão rápida e abrangente do status e dos dados relevantes desses processos ou etapas.|
+| US12<a id='us12'></a> |Como um Gerente/Diretor, desejo ter a capacidade de visualizar o histórico de interações com os processos ou etapas sob minha responsabilidade, para rastrear ações realizadas, identificar responsabilidades e entender o progresso e as mudanças ao longo do tempo.
+| US13<a id='us13'></a> |Como um C-Level da empresa, desejo ter a capacidade de gerar um relatório personalizado que contenha informações-chave sobre processos específicos. Isso me permitirá obter uma visão consolidada do cumprimento dos processos, comunicar eficazmente o desempenho da empresa aos investidores e partes interessadas, bem como fornecer relatórios para auditorias externas quando necessário|
+| US14<a id='us14'></a> |Como um C-Level da empresa, desejo poder exportar o relatório em formato PDF para facilitar o compartilhamento conveniente das informações, tanto ao apresentar dados para investidores quanto durante auditorias externas|
+
+
 
 <br>
 
@@ -213,8 +220,8 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |  Vitor Lima  | Product Owner | <a href="https://github.com/lima2206"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/vitor-spricigo-lima-84a377184"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 |   Cauan Almeida   | Desenvolvedor | <a href="https://github.com/Tsundek"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Pedro Davi | Desenvolvedor | <a href="https://github.com/PedrohDavi"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Natanael Machado  | Desenvolvedor | <a href="https://github.com/NatanaelSM"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Ivan Duarte | Desenvolvedor | <a href="https://github.com/Ivan-Duarte"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Natanael Machado  | Desenvolvedor | <a href="https://github.com/NatanaelSM"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/natanael-machado-796841270"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Ivan Duarte | Desenvolvedor | <a href="https://github.com/Ivan-Duarte"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/ivan-duarte-982532217"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Nilber Siqueira | Desenvolvedor | <a href="https://github.com/NilberSiqueira"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 
 <br>
