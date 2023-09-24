@@ -51,7 +51,7 @@
 <br>
 
 
-## 	:art: Wireframe do Programa
+## 	:art: Protótipo do Programa
 
 <br>
 
