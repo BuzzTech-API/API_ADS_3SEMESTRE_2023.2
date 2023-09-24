@@ -51,12 +51,11 @@
 <br>
 
 
-
 ### 	:art: Wireframe do Programa
 
 <br>
 
-https://user-images.githubusercontent.com/90930885/229379236-2301d570-b1f4-48e0-b01a-85aa8f1229b3.mp4
+[Programa](https://github.com/BuzzTech-API/API_ADS_3SEMESTRE_2023.2/blob/08d445dd4e07a46697bf72fb22d7d2e7b3a340f1/doc/img/Prot%C3%B3tipo%20sem%20Audio.mp4)
 
 <br>
 
