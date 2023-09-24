@@ -55,7 +55,7 @@
 
 <br>
 
-<video src="doc/img/PrototipoSemAudio.mp4"></video>
+<video src="BuzzTech-API/API_ADS_3SEMESTRE_2023.2/doc/img/PrototipoSemAudio.mp4"></video>
 
 <br>
 
