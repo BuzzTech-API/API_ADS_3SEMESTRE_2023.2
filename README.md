@@ -51,11 +51,11 @@
 <br>
 
 
-### 	:art: Wireframe do Programa
+## 	:art: Wireframe do Programa
 
 <br>
 
-<video src="doc/img/Protótipo sem Audio.mp4" controls title="Title"></video>
+<video src="doc/img/Protótipo sem Audio.mp4"></video>
 
 <br>
 
