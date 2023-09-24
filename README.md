@@ -1,5 +1,5 @@
 # API ADS 3º Semestre 
-# Nome do Projeto
+# Sistema
 
 
 <p align="center">
@@ -43,7 +43,8 @@
 <br>
 <br>
 
-> Status do Projeto: Em desenvolvimento! :hammer_and_wrench: <!-- >:white_check_mark: -->
+> Status do Projeto: Em desenvolvimento! :hammer_and_wrench:
+
 <br>
 
 
@@ -55,18 +56,17 @@ Em Desenvolvimento :hammer_and_wrench:
 
 <br>
 
-<!-- https://user-images.githubusercontent.com/90930885/229379236-2301d570-b1f4-48e0-b01a-85aa8f1229b3.mp4 -->
 
-<br>
+
 
 
 ## :medal_sports: Desafio <a id="desafio"></a>
-<br>
+
 Desenvolver uma plataforma web que nos permita criar, monitorar e registrar cada etapa dos processos regulatórios essenciais para uma organização. O foco é garantir que todos os processos necessários, conforme definido pelo time de regulatório, estejam sendo rigorosamente cumpridos. A plataforma será um recurso valioso para rastrear o progresso, assegurando a conformidade e gerando evidências para cada etapa.
 
 <br>
 
-<!-- ## :goal_net: Escopo do Projeto <a id="escopo"></a>
+## :goal_net: Escopo do Projeto <a id="escopo"></a>
 *Pré-requisitos:*
  > *Requisitos Funcionais*
 - [x] Linguagem Java (Requisito Fatec)
@@ -78,7 +78,7 @@ Desenvolver uma plataforma web que nos permita criar, monitorar e registrar cada
 - [x] Usabilidade
 - [x] Sistema de gerenciamento de banco de dados - MySQL
  
-<br> -->
+<br>
 
 
 ## :books: Metodologia <a id="metodologia"></a>
@@ -133,44 +133,52 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 ## :seedling: Backlog do Produto<a id="backlog"></a>
 
 
+<!-- Pontos de historia -->
+
 
 |    Tarefa    |    Descrição    |               Histórias de Usuários                | Sprint | Estimativa de Esforço |       Status       |
 | :----------: | :-------------: | :------------------------------------------------: | :----: | :-------------------: | :----------------: |
 |  Criar Processos  | Abertura de um novo processo | <a href='#us01'>US01</a> |  1    |          4h           | :white_check_mark: |
-|  Criar Etapas  | Abertura de uma nova etapa | <a href='#us02'>US02</a>, <a href='#us03'>US03</a>, <a href='#us04'>US04</a> |   1    |          8h           | :white_check_mark: |
-|  Fornecer Evidências  | Anexação de evidências dentro de uma etapa |              <a href='#us02'>US02</a>              |   1    |         4h          | :white_check_mark: |
-|  Notificar Prazo  | Notificação de prazos |              <a href='#us03'>US03</a>              |   1    |         4h          | :white_check_mark: |
-|  Alterar Processos  | Editar e Reorganizar processos e seu conteúdo |              <a href='#us04'>US04</a>              |   1    |          8h          | :white_check_mark: |
-|  Cadastrar Usuários  | Cadastro / Login de usuários | <a href='#us01'>US01</a>, <a href='#us02'>US02</a> |   1    |          2h           | :white_check_mark: |
-|  Filtrar Processos  | Filtro de Processos |              <a href='#us01'>US01</a>, <a href='#us03'>US03</a>|   1    |         2h          | :white_check_mark: |
-|  Visualizar Detalhes  | Painel de visualização de detalhes |              <a href='#us01'>US01</a>, <a href='#us04'>US04</a>|  1    |          4h          | :white_check_mark: |
-|  Visualizar Histórico | Visualizar histórico de informações chave de um ou mais Processos / Etapas | <a href='#us08'>US08</a> |   1    |          4h           | :white_check_mark: |
-|  Gerar Relatório  | Gerar um relatório com informações chave de um ou mais Processos / Etapas  | <a href='#us09'>US09</a> |   2    |          16h           | :white_check_mark: |
-|  Exportar Relatório  |  Exportar o Relatório para fora da aplicação  | <a href='#us10'>US10</a> |   2    |          8h           | :white_check_mark: |
+|  Criar Etapas  | Abertura de uma nova etapa | <a href='#us02'>US02</a> |   1    |          8h           | :white_check_mark: |
+|  Fornecer Evidências  | Anexação de evidências dentro de uma etapa | <a href='#us03'>US03</a> |   1    |         4h          | :white_check_mark: |
+|  Cadastrar Usuários  | Cadastro / Login de usuários | <a href='#us04'>US04 </a>, <a href='#us05'>US05</a> |   1    |          2h           | :white_check_mark: |
+|  Notificar Prazo  | Notificação de prazos | <a href='#us06'>US06 </a>, <a href='#us07'>US07 </a>, <a href='#us08'>US08 </a> |   2    |         4h          | :ballot_box_with_check: |
+|  Alterar Processos  | Editar e Reorganizar processos e seu conteúdo | <a href='#us09'>US09</a> |   2    |          8h          | :ballot_box_with_check: |
+|  Filtrar Processos  | Filtro de Processos | <a href='#us10'>US010</a> |   3    |         2h          | :ballot_box_with_check: |
+|  Visualizar Detalhes  | Painel de visualização de detalhes | <a href='#us011'>US011</a> |  3    |          4h          | :ballot_box_with_check:|
+|  Visualizar Histórico | Visualizar histórico de informações chave de um ou mais Processos / Etapas | <a href='#us012'>US12</a> |   3    |          4h           | :ballot_box_with_check: |
+|  Gerar Relatório  | Gerar um relatório com informações chave de um ou mais Processos / Etapas  | <a href='#us13'>US13</a> |   4    |          16h           | :ballot_box_with_check: |
+|  Exportar Relatório  |  Exportar o Relatório para fora da aplicação  | <a href='#us14'>US14</a> |   4    |          8h           | :ballot_box_with_check: |
 
 
 <br>
 
 
-## :round_pushpin: Roadmap<a id='roadmap'></a>
+<!-- ## :round_pushpin: Roadmap<a id='roadmap'></a>
 
 
 <img src="" alt="Roadmap" style="" />
 
 
-<br>
+<br> -->
 
 ## :moyai: Personas <a id='personas'></a>
 
+| C-Level |
+| :------:|
+| Eu, como **C-Level** da *Ionic Health*, tenho como foco principal é fornecer informações claras e precisas aos nossos investidores sobre como estamos gerenciando nossos processos e cumprindo nossos objetivos. Preciso de relatórios que comuniquem de forma eficaz nosso sucesso e conformidade. |
 
+| Gerente / Diretor |
+| :------:|
+| Eu, como **Gerente / Diretor** da *Ionic Health*, necessito da capacidade de criar, definir requisitos e acompanhar todos os detalhes dos projetos é fundamental para o sucesso da equipe. Preciso de uma ferramenta que me ajude a manter tudo sob controle de forma eficaz e eficiente. |
+
+| Líder / Gestor |
+| :----:|
+|Eu, como **Líder / Gestor** da *Ionic Health*, é essencial ter uma ferramenta que me permita adicionar novas etapas com clareza e eficiência aos processos existentes. Isso simplifica a adaptação e o gerenciamento dos processos em constante evolução. Também é imperativo que possa fazer requisições das evidências necessárias para a validação de tais etapas, isso torna possível acompanhar o progresso e garantir que todos estejam alinhados com nossas metas. |
 
 | Colaborador  |
-| :----------------------------------------------------------: |
-| , ela leciona em quatro turmas na escola estadual João Leme e três turmas na escola estadual Ary Barroso. Ela não tem experiência aprofundada com computador, conhecendo, somente, o sistema operacional Windows e alguns recursos básicos do pacote Office. Ela utiliza um notebook em sala de aula para realizar algumas atividades. Para cada turma, ela costuma aplicar duas provas e dois trabalhos, totalizando quatro atividades por bimestre a serem monitoradas. Ela precisa de uma maneira fácil de acompanhar as entregas das atividades dos alunos em suas diversas turmas, como também, gerar relatórios resumidos para apresentar nas reuniões com a coordenação. |
-
-| Testem, 26 anos, teste |
-| :---------------------------|
-| Lorem ipsum dolor sit amet. Non aliquam rerum sit rerum nobis aut amet rerum cum odio consequatur sit consectetur placeat At ipsa doloremque. Sed dolor corrupti rem cumque voluptatibus qui dolores expedita qui fuga quasi quo autem voluptas. Ea ipsum minima nam galisum commodi est magni adipisci quo possimus minima cum eveniet quod est libero aliquam et fuga inventore. Non harum galisum quo dolorem quae quo laboriosam enim id debitis aperiam aut asperiores tempore. |
+| :----------: |
+| Eu, como **Colaborador** da *Ionic Health*, preciso de uma maneira fácil e eficaz de gerenciar todas as evidências necessárias nos processos da empresa. Uma notificação clara e instruções precisas são essenciais para garantir que eu possa fazer o meu trabalho de forma eficiente.  |
 
 
 <br>
@@ -180,19 +188,21 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 |          ID           |                     História de Usuário                      |
 | :-------------------: | :----------------------------------------------------------: |
-| US01<a id='us01'></a> |Como um Gerente ou Diretor, quero criar uma nova instância de um processo para assim conseguir organiza-lo e documenta-lo através de suas etapas.|
-| US02<a id='us02'></a> |Como um Gerente ou Diretor quero criar Etapas dentro dos processos para assim poder organizar de forma linear o progresso do processo. |
+| US01<a id='us01'></a> |Como um Gerente/Diretor, quero criar uma nova instância de um processo para assim conseguir organiza-lo e documenta-lo através de suas etapas.|
+| US02<a id='us02'></a> |Como um Gerente/Diretor quero criar Etapas dentro dos processos para assim poder organizar de forma linear o progresso do processo. |
 | US03<a id='us03'></a> |Como um Colaborador quero adicionar as Evidências corretas nas etapas para que a etapa tenha uma prova de que foi concluida com sucesso. |
-| US04<a id='us04'></a> | |
-| US05<a id='us05'></a> | |
-| US06<a id='us06'></a> | |
-| US07<a id='us07'></a> | |
-| US08<a id='us08'></a> | |
-| US09<a id='us09'></a> | |
-| US10<a id='us10'></a> | |
-| US11<a id='us11'></a> | |
-| US12<a id='us12'></a> | |
-| US13<a id='us13'></a> | |
+| US04<a id='us04'></a> |Como um Usuário Registrado, desejo fazer login na minha conta para acessar minhas tarefas e processos.|
+| US05<a id='us05'></a> |Como um Administrador do Sistema, desejo ter a capacidade de cadastrar novos usuários no aplicativo para que eles possam fazer login e acessar suas tarefas e processos.|
+| US06<a id='us06'></a> |Como um Gerente/Diretor, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em um processo que estou gerenciando, para que eu possa acompanhar os prazos e garantir que os processos sejam executados de acordo com as especificações e prazos estabelecidos.|
+| US07<a id='us07'></a> |Como um Líder/Gestor, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em uma etapa ou requisição de evidência que estou supervisionando, para que eu possa acompanhar os prazos e garantir que elas sejam concluídas pontualmente e com eficiência. |
+| US08<a id='us08'></a> |Como um Colaborador, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em uma etapa que estou envolvido, para que eu possa cumprir os prazos e fornecer as evidências necessárias para validar o cumprimento dos requisitos da etapa.|
+| US09<a id='us09'></a> |Como um Gerente/Diretor, desejo ter a capacidade de alterar e reorganizar os processos existentes, para que eu possa adaptar os processos às necessidades em constante evolução da minha equipe e da organização.|
+| US10<a id='us10'></a> |Como um Usuário, desejo ter a capacidade de filtrar processos ou etapas com base em critérios específicos, como status, data de criação ou outros atributos relevantes, para que eu possa rapidamente localizar os processos ou etapas que preciso gerenciar ou revisar com mais eficiência.|
+| US11<a id='us11'></a> |Como um Usuário, desejo ter acesso a um painel de visualização de detalhes que me permita ver informações-chave de um ou mais processos ou etapas nos quais estou envolvido, para que eu possa obter uma visão rápida e abrangente do status e dos dados relevantes desses processos ou etapas.|
+| US12<a id='us12'></a> |Como um Gerente/Diretor, desejo ter a capacidade de visualizar o histórico de interações com os processos ou etapas sob minha responsabilidade, para rastrear ações realizadas, identificar responsabilidades e entender o progresso e as mudanças ao longo do tempo.
+| US13<a id='us13'></a> |Como um C-Level da empresa, desejo ter a capacidade de gerar um relatório personalizado que contenha informações-chave sobre processos específicos. Isso me permitirá obter uma visão consolidada do cumprimento dos processos, comunicar eficazmente o desempenho da empresa aos investidores e partes interessadas, bem como fornecer relatórios para auditorias externas quando necessário|
+| US14<a id='us14'></a> |Como um C-Level da empresa, desejo poder exportar o relatório em formato PDF para facilitar o compartilhamento conveniente das informações, tanto ao apresentar dados para investidores quanto durante auditorias externas|
+
 
 
 <br>
