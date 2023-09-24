@@ -55,6 +55,7 @@
 
 <br>
 
+<a href="BuzzTech-API/API_ADS_3SEMESTRE_2023.2/doc/img/PrototipoSemAudio.mp4">Video do Protóripo</a> 
 <video src="BuzzTech-API/API_ADS_3SEMESTRE_2023.2/doc/img/PrototipoSemAudio.mp4"></video>
 
 <br>
