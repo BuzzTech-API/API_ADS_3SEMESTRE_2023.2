@@ -13,7 +13,7 @@
 <br>
 <p align="center">
   <a href ="#desafio"> Desafio </a>  |   
-  <a href ="#escopo"> Escopo </a>  |   
+  <!-- <a href ="#escopo"> Escopo </a>  |    -->
   <a href ="#metodologia"> Metodologia </a>  |
   <a href ="#mvp"> MVP </a>  |
   <a href ="#sprint"> Sprints </a>  |
@@ -30,15 +30,16 @@
 
 <br>
 
-  <h4 align="center">
-    <a href="https://docs.oracle.com/en/java/"><img src = "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/></a>
-    <a href="https://docs.github.com/pt"><img src = "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
-    <a href="https://help.figma.com/hc/en-us"><img src = "https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
-    <a href="https://dev.mysql.com/doc/"><img src = "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/></a>
-  </h4>
-
-
-
+<h4 align="center">
+ <a href="https://www.typescriptlang.org"><img src = "https://img.shields.io/badge/TypeScript-3f80bf?style=for-the-badge&logo=TypeScript&logoColor=white"/></a>
+ <a href="https://react.dev"><img src = "https://img.shields.io/badge/React-3781b0?style=for-the-badge&logo=React&logoColor=white"/></a>
+ <a href="https://www.python.org"><img src = "https://img.shields.io/badge/Python-0009ba?style=for-the-badge&logo=Python&logoColor=white"/></a>
+ <a href="https://fastapi.tiangolo.com"><img src = "https://img.shields.io/badge/FastAPI-498c75?style=for-the-badge&logo=fastapi&logoColor=white"/></a>
+ <a href="https://www.docker.com"><img src = "https://img.shields.io/badge/Docker-0e0a8f?style=for-the-badge&logo=Docker&logoColor=white"/></a>
+ <a href="https://docs.github.com/pt"><img src = "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+ <a href="https://help.figma.com/hc/en-us"><img src = "https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/></a>
+ <a href="https://www.postgresql.org"><img src = "https://img.shields.io/badge/PostgreSQL-47678f?style=for-the-badge&logo=postgresql&logoColor=white"/></a>
+</h4>
 
 
 
@@ -68,7 +69,7 @@ Desenvolver uma plataforma web que nos permita criar, monitorar e registrar cada
 
 <br>
 
-## :goal_net: Escopo do Projeto <a id="escopo"></a>
+<!-- ## :goal_net: Escopo do Projeto <a id="escopo"></a>
 *Pré-requisitos:*
  > *Requisitos Funcionais*
 - [x] Linguagem Java (Requisito Fatec)
@@ -80,7 +81,7 @@ Desenvolver uma plataforma web que nos permita criar, monitorar e registrar cada
 - [x] Usabilidade
 - [x] Sistema de gerenciamento de banco de dados - MySQL
  
-<br>
+<br> -->
 
 
 ## :books: Metodologia <a id="metodologia"></a>
