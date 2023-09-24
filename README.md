@@ -55,7 +55,7 @@
 
 <br>
 
-[Programa](https://github.com/BuzzTech-API/API_ADS_3SEMESTRE_2023.2/blob/08d445dd4e07a46697bf72fb22d7d2e7b3a340f1/doc/img/Prot%C3%B3tipo%20sem%20Audio.mp4)
+<video src="doc/img/Protótipo sem Audio.mp4" controls title="Title"></video>
 
 <br>
 
