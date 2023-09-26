@@ -55,8 +55,6 @@ services:
     volumes:
       - ./SOGAP-React:/code:delegated
       - /code/node_modules
-    ports:
-      - 3000:3000
     expose:
       - 3000
     networks:
@@ -90,26 +88,24 @@ services:
       - backnet
     expose:
       - 8000
-    ports:
-      - 8000:8000
     depends_on:
       db:
         condition: service_healthy
 
-#  nginx:
-#    restart: always
-#    build:
-#      dockerfile: Dockerfile
-#      context: ./nginx
-#    ports:
-#      - "80:80"
-#    networks:
-#      - backnet
-#    depends_on:
-#      - myapp
-#      - frontend
-#    volumes:
-#      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "80:80"
+    networks:
+      - backnet
+    depends_on:
+      - myapp
+      - frontend
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
 
 volumes:
   db-data:
