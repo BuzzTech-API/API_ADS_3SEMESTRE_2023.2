@@ -51,13 +51,13 @@
 <br>
 
 
-
-## 	:art: Protótipo
-
+## 	:art: Protótipo do Programa
 
 <br>
 
-<https://github.com/BuzzTech-API/API_ADS_3SEMESTRE_2023.2/blob/main/doc/img/Protótipo%20sem%20Audio.mp4>
+
+https://github.com/BuzzTech-API/API_ADS_3SEMESTRE_2023.2/assets/112436453/3ca1624d-1a4e-47b3-a307-d734501fbe06
+
 
 <br>
 
