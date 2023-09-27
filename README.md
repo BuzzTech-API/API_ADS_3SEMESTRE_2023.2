@@ -123,9 +123,9 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 ## :date: Sprints <a id="sprint"></a>
 
-🔖 SPRINT 1:  Em desenvolvimento! :hammer_and_wrench:
+🔖 SPRINT 1:  Concluído! :white_check_mark:
 
-🔖 SPRINT 2:  Não iniciado  :ballot_box_with_check:
+🔖 SPRINT 2:  Em desenvolvimento! :hammer_and_wrench:
 
 🔖 SPRINT 3:  Não iniciado  :ballot_box_with_check:
 
