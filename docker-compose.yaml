@@ -101,6 +101,7 @@ services:
       context: ./nginx
     ports:
       - "80:80"
+      - "8000:8000"
     networks:
       - backnet
     depends_on:
