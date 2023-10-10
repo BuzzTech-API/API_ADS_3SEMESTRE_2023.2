@@ -41,28 +41,6 @@ services:
     networks:
       - backnet
 
-  frontend:
-    build:
-      context: SOGAP-React
-      target: frontend
-    container_name: frontend
-    restart: always
-    command: "npm start --host 0.0.0.0 --port 3000"
-    working_dir: /code
-    user: "node"
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-      - WATCHPACK_POLLING=true
-      - WDS_SOCKET_PORT=80
-      - NODE_ENV=production
-    volumes:
-      - ./SOGAP-React:/code:delegated
-      - /code/node_modules
-    expose:
-      - 3000
-    networks:
-      - backnet
-
 
   myapp:
     build:
@@ -75,28 +53,15 @@ services:
       - ./SOGAP-Process-Service:/code
     networks:
       - backnet
+    ports:
+      - 8000:8000
     expose:
       - 8000
     depends_on:
       db:
         condition: service_healthy
 
-  nginx:
-    restart: always
-    container_name: nginx
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    ports:
-      - 80:80
-      - 8000:8000
-    networks:
-      - backnet
-    depends_on:
-      - myapp
-      - frontend
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
 
 volumes:
   db-data:
