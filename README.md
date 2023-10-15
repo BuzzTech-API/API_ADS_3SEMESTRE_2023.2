@@ -8,8 +8,6 @@
 
 <br>
 
-## 	Video Sprint Review 1
-<https://www.youtube.com/watch?v=c-Qeiz_8Ksc&ab_channel=BuzzTech>
 <hr>
 <br>
 <p align="center">
@@ -56,8 +54,8 @@
 
 <br>
 
+Link do gif
 
-https://github.com/BuzzTech-API/API_ADS_3SEMESTRE_2023.2/assets/112436453/3ca1624d-1a4e-47b3-a307-d734501fbe06
 
 
 <br>
@@ -112,7 +110,7 @@ Logo, para embasar a tomada de decisão e priorizar as tarefas com maior entrega
 
 
 
-A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética, porém funcional, do programa desktop para controle das atividades dos alunos de uma escola estadual. Nele o usuário poderá inserir as seguintes informações:
+A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética, porém funcional, do software de documentação de processos. Nele o usuário poderá:
 
 - Documentar processos;
 - Subcategorizar em etapas;
@@ -125,9 +123,9 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 🔖 SPRINT 1:  Concluído! :white_check_mark:
 
-🔖 SPRINT 2:  Em desenvolvimento! :hammer_and_wrench:
+🔖 SPRINT 2:  Concluído! :white_check_mark:
 
-🔖 SPRINT 3:  Não iniciado  :ballot_box_with_check:
+🔖 SPRINT 3:  Em andamento  :hammer_and_wrench:
 
 🔖 SPRINT 4:  Não iniciado  :ballot_box_with_check:
 
@@ -142,19 +140,22 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 <!-- Pontos de historia -->
 
 
-|    Tarefa    |    Descrição    |               Histórias de Usuários                | Sprint | Estimativa de Esforço |       Status       |
+|    Tarefa    |    Descrição    |               Histórias de Usuários                | Sprint | Pontos de História |       Status       |
 | :----------: | :-------------: | :------------------------------------------------: | :----: | :-------------------: | :----------------: |
-|  Criar Processos  | Abertura de um novo processo | <a href='#us01'>US01</a> |  1    |          4h           | :white_check_mark: |
-|  Criar Etapas  | Abertura de uma nova etapa | <a href='#us02'>US02</a> |   1    |          8h           | :white_check_mark: |
-|  Fornecer Evidências  | Anexação de evidências dentro de uma etapa | <a href='#us03'>US03</a> |   1    |         4h          | :white_check_mark: |
-|  Cadastrar Usuários  | Cadastro / Login de usuários | <a href='#us04'>US04 </a>, <a href='#us05'>US05</a> |   1    |          2h           | :white_check_mark: |
-|  Notificar Prazo  | Notificação de prazos | <a href='#us06'>US06 </a>, <a href='#us07'>US07 </a>, <a href='#us08'>US08 </a> |   2    |         4h          | :ballot_box_with_check: |
-|  Alterar Processos  | Editar e Reorganizar processos e seu conteúdo | <a href='#us09'>US09</a> |   2    |          8h          | :ballot_box_with_check: |
-|  Filtrar Processos  | Filtro de Processos | <a href='#us10'>US010</a> |   3    |         2h          | :ballot_box_with_check: |
-|  Visualizar Detalhes  | Painel de visualização de detalhes | <a href='#us011'>US011</a> |  3    |          4h          | :ballot_box_with_check:|
-|  Visualizar Histórico | Visualizar histórico de informações chave de um ou mais Processos / Etapas | <a href='#us012'>US12</a> |   3    |          4h           | :ballot_box_with_check: |
-|  Gerar Relatório  | Gerar um relatório com informações chave de um ou mais Processos / Etapas  | <a href='#us13'>US13</a> |   4    |          16h           | :ballot_box_with_check: |
-|  Exportar Relatório  |  Exportar o Relatório para fora da aplicação  | <a href='#us14'>US14</a> |   4    |          8h           | :ballot_box_with_check: |
+|  Criar Processos  | Abertura de um novo processo | <a href='#us01'>US01</a> |  1    |          37           | :white_check_mark: |
+|  Criar Etapas  | Abertura de uma nova etapa | <a href='#us02'>US02</a> |   1    |          37          | :white_check_mark: |
+|  Fornecer Evidências  | Anexação de evidências dentro de uma etapa | <a href='#us03'>US03</a> |   1    |         52          | :white_check_mark: |
+|  Cadastrar Usuários  | Cadastro / Login de usuários | <a href='#us04'>US04 </a>, <a href='#us05'>US05</a> |   1    |          43           | :white_check_mark: |
+|  Adicionar Hierarquias / Cargos  | Suporte aos Cargos e Hierarquias de cada usuário | <a href='#us06'>US06 </a> |   2    |          24           | :white_check_mark: |
+|  Validar Evidências  | Sistema para validar as evidências já solicitadas | <a href='#us07'>US07 </a> |   2    |          28           | :white_check_mark: |
+|  Implementar a Autenticação de 2 fatores  | Autenticação de 2 fatores no login | <a href='#us08'>US08 </a> |   2    |          16           | :white_check_mark: |
+|  Alterar Processos / Evidências  | Editar e Reorganizar processos e seus conteúdos | <a href='#us09'>US09</a> |   2    |          28          | :white_check_mark:  |
+|  Notificar Prazo  | Notificação de prazos | <a href='#us10'>US10 </a>, <a href='#us11'>US11 </a>, <a href='#us12'>US12 </a> |   3    |         80          | :ballot_box_with_check: |
+|  Filtrar Processos  | Filtro de Processos | <a href='#us13'>US13</a> |   3    |         20          | :ballot_box_with_check: |
+|  Visualizar Detalhes  | Painel de visualização de detalhes | <a href='#us14'>US14</a> |  3    |          80          | :ballot_box_with_check:|
+|  Visualizar Histórico | Visualizar histórico de informações chave de um ou mais Processos / Etapas | <a href='#us15'>US15</a> |   3    |          80           | :ballot_box_with_check: |
+|  Gerar Relatório  | Gerar um relatório com informações chave de um ou mais Processos / Etapas  | <a href='#us16'>US16</a> |   4    |          40           | :ballot_box_with_check: |
+|  Exportar Relatório  |  Exportar o Relatório para fora da aplicação  | <a href='#us17'>US17</a> |   4    |          20           | :ballot_box_with_check: |
 
 
 <br>
@@ -199,15 +200,18 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 | US03<a id='us03'></a> |Como um Colaborador quero adicionar as Evidências corretas nas etapas para que a etapa tenha uma prova de que foi concluida com sucesso. |
 | US04<a id='us04'></a> |Como um Usuário Registrado, desejo fazer login na minha conta para acessar minhas tarefas e processos.|
 | US05<a id='us05'></a> |Como um Administrador do Sistema, desejo ter a capacidade de cadastrar novos usuários no aplicativo para que eles possam fazer login e acessar suas tarefas e processos.|
-| US06<a id='us06'></a> |Como um Gerente/Diretor, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em um processo que estou gerenciando, para que eu possa acompanhar os prazos e garantir que os processos sejam executados de acordo com as especificações e prazos estabelecidos.|
-| US07<a id='us07'></a> |Como um Líder/Gestor, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em uma etapa ou requisição de evidência que estou supervisionando, para que eu possa acompanhar os prazos e garantir que elas sejam concluídas pontualmente e com eficiência. |
-| US08<a id='us08'></a> |Como um Colaborador, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em uma etapa que estou envolvido, para que eu possa cumprir os prazos e fornecer as evidências necessárias para validar o cumprimento dos requisitos da etapa.|
+| US06<a id='us06'></a> |Como um Usuário Registrado, desejo ter a capacidade de impersonar certos cargos dentro da organização para que eu possa ter uma experiência específica das minhas funções dentro do software.| 
+| US07<a id='us07'></a> |Como um líder de equipe, desejo ter a capacidade de validar as evidências anexadas pelos colaboradores em relação a uma etapa específica de um processo, para que eu possa confirmar a revisão feita naquele documento anexado.| 
+| US08<a id='us08'></a> |Como um usuário do aplicativo, desejo ter a capacidade de habilitar e utilizar a autenticação de dois fatores (2FA) no momento do login. Isso me permitirá adicionar uma camada adicional de segurança à minha conta, aumentando a proteção contra acessos não autorizados.| 
 | US09<a id='us09'></a> |Como um Gerente/Diretor, desejo ter a capacidade de alterar e reorganizar os processos existentes, para que eu possa adaptar os processos às necessidades em constante evolução da minha equipe e da organização.|
-| US10<a id='us10'></a> |Como um Usuário, desejo ter a capacidade de filtrar processos ou etapas com base em critérios específicos, como status, data de criação ou outros atributos relevantes, para que eu possa rapidamente localizar os processos ou etapas que preciso gerenciar ou revisar com mais eficiência.|
-| US11<a id='us11'></a> |Como um Usuário, desejo ter acesso a um painel de visualização de detalhes que me permita ver informações-chave de um ou mais processos ou etapas nos quais estou envolvido, para que eu possa obter uma visão rápida e abrangente do status e dos dados relevantes desses processos ou etapas.|
-| US12<a id='us12'></a> |Como um Gerente/Diretor, desejo ter a capacidade de visualizar o histórico de interações com os processos ou etapas sob minha responsabilidade, para rastrear ações realizadas, identificar responsabilidades e entender o progresso e as mudanças ao longo do tempo.
-| US13<a id='us13'></a> |Como um C-Level da empresa, desejo ter a capacidade de gerar um relatório personalizado que contenha informações-chave sobre processos específicos. Isso me permitirá obter uma visão consolidada do cumprimento dos processos, comunicar eficazmente o desempenho da empresa aos investidores e partes interessadas, bem como fornecer relatórios para auditorias externas quando necessário|
-| US14<a id='us14'></a> |Como um C-Level da empresa, desejo poder exportar o relatório em formato PDF para facilitar o compartilhamento conveniente das informações, tanto ao apresentar dados para investidores quanto durante auditorias externas|
+| US10<a id='us10'></a> |Como um Gerente/Diretor, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em um processo que estou gerenciando, para que eu possa acompanhar os prazos e garantir que os processos sejam executados de acordo com as especificações e prazos estabelecidos.|
+| US11<a id='us11'></a> |Como um Líder/Gestor, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em uma etapa ou requisição de evidência que estou supervisionando, para que eu possa acompanhar os prazos e garantir que elas sejam concluídas pontualmente e com eficiência. |
+| US12<a id='us12'></a> |Como um Colaborador, desejo receber notificações por email sempre que um prazo se aproximar ou expirar em uma etapa que estou envolvido, para que eu possa cumprir os prazos e fornecer as evidências necessárias para validar o cumprimento dos requisitos da etapa.|
+| US13<a id='us13'></a> |Como um Usuário, desejo ter a capacidade de filtrar processos ou etapas com base em critérios específicos, como status, data de criação ou outros atributos relevantes, para que eu possa rapidamente localizar os processos ou etapas que preciso gerenciar ou revisar com mais eficiência.|
+| US14<a id='us14'></a> |Como um Usuário, desejo ter acesso a um painel de visualização de detalhes que me permita ver informações-chave de um ou mais processos ou etapas nos quais estou envolvido, para que eu possa obter uma visão rápida e abrangente do status e dos dados relevantes desses processos ou etapas.|
+| US15<a id='us15'></a> |Como um Gerente/Diretor, desejo ter a capacidade de visualizar o histórico de interações com os processos ou etapas sob minha responsabilidade, para rastrear ações realizadas, identificar responsabilidades e entender o progresso e as mudanças ao longo do tempo.
+| US16<a id='us16'></a> |Como um C-Level da empresa, desejo ter a capacidade de gerar um relatório personalizado que contenha informações-chave sobre processos específicos. Isso me permitirá obter uma visão consolidada do cumprimento dos processos, comunicar eficazmente o desempenho da empresa aos investidores e partes interessadas, bem como fornecer relatórios para auditorias externas quando necessário|
+| US17<a id='us17'></a> |Como um C-Level da empresa, desejo poder exportar o relatório em formato PDF para facilitar o compartilhamento conveniente das informações, tanto ao apresentar dados para investidores quanto durante auditorias externas|
 
 
 
