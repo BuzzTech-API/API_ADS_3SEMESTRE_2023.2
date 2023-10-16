@@ -54,7 +54,8 @@
 
 <br>
 
-Link do gif
+
+![Video do Software](https://github.com/BuzzTech-API/API_ADS_3SEMESTRE_2023.2/assets/112436453/5ed6556f-7c30-4950-8192-28d35678f3d2)
 
 
 
