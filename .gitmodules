@@ -4,3 +4,6 @@
 [submodule "SOGAP-Process-Service"]
 	path = SOGAP-Process-Service
 	url = https://github.com/BuzzTech-API/SOGAP-Process-Service.git
+[submodule "SOGAP-Notification-Service"]
+	path = SOGAP-Notification-Service
+	url = https://github.com/BuzzTech-API/SOGAP-Notification-Service.git
