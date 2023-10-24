@@ -64,7 +64,7 @@ services:
       - backnet
 
 
-  myapp:
+  process-back:
     build:
       context: SOGAP-Process-Service
       target: builder
@@ -81,6 +81,23 @@ services:
       db:
         condition: service_healthy
 
+  notification-back:
+    build:
+      context: SOGAP-Notification-Service
+      target: builder
+    working_dir: /code
+    restart: always
+    container_name: notificationBack
+    volumes:
+      - ./SOGAP-Notification-Service:/code
+    networks:
+      - backnet
+    expose:
+      - 8001
+    depends_on:
+      db:
+        condition: service_healthy
+
   nginx:
     restart: always
     container_name: nginx
@@ -93,7 +110,8 @@ services:
     networks:
       - backnet
     depends_on:
-      - myapp
+      - process-back
+      - notification-back
       - frontend
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
