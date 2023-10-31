@@ -41,8 +41,7 @@ services:
     networks:
       - backnet
 
-
-  myapp:
+  process-back:
     build:
       context: SOGAP-Process-Service
       target: builder
@@ -53,14 +52,32 @@ services:
       - ./SOGAP-Process-Service:/code
     networks:
       - backnet
-    ports:
-      - 8000:8000
     expose:
       - 8000
+    ports:
+      - 8000:8000
     depends_on:
       db:
         condition: service_healthy
 
+  notification-back:
+    build:
+      context: SOGAP-Notification-Service
+      target: builder
+    working_dir: /code
+    restart: always
+    container_name: notificationBack
+    volumes:
+      - ./SOGAP-Notification-Service:/code
+    networks:
+      - backnet
+    expose:
+      - 8001
+    ports:
+      - 8001:8001
+    depends_on:
+      db:
+        condition: service_healthy
 
 
 volumes:
