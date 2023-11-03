@@ -95,8 +95,7 @@ services:
     expose:
       - 8001
     depends_on:
-      db:
-        condition: service_healthy
+      - process-back
 
   nginx:
     restart: always
