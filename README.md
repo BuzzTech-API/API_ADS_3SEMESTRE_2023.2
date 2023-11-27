@@ -133,7 +133,7 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 
 🔖 SPRINT 3:  Concluído! :white_check_mark:
 
-🔖 SPRINT 4:  Em andamento  :hammer_and_wrench:
+🔖 SPRINT 4:  Concluído!  :white_check_mark: 
 
 
 
@@ -159,8 +159,8 @@ A definição do nosso *Minimal Viable Product (MVP)* é uma versão sintética,
 |  Notificar Prazo  | Notificação de prazos | <a href='#us10'>US10 </a>, <a href='#us11'>US11 </a>, <a href='#us12'>US12 </a> |   3    |         80          | :white_check_mark: |
 |  Visualizar Detalhes  | Painel de visualização de detalhes | <a href='#us13'>US13</a> |  3    |          80          | :white_check_mark:|
 |  Filtrar Processos  | Filtro de Processos | <a href='#us14'>US14</a> |   3    |         20          | :white_check_mark: |
-|  Visualizar Histórico | Visualizar histórico de informações chave de um ou mais Processos / Etapas | <a href='#us15'>US15</a> |   4    |          80           | :ballot_box_with_check: |
-|  Gerar Relatório  | Gerar um relatório com informações chave de um ou mais Processos / Etapas  | <a href='#us16'>US16</a> |   4    |          40           | :ballot_box_with_check: |
+|  Visualizar Histórico | Visualizar histórico de informações chave de um ou mais Processos / Etapas | <a href='#us15'>US15</a> |   4    |          80           |  	:negative_squared_cross_mark: |
+|  Gerar Relatório  | Gerar um relatório com informações chave de um ou mais Processos / Etapas  | <a href='#us16'>US16</a> |   4    |          40           | :white_check_mark: |
 
 
 <br>
